@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Component xmlns:ns2="http://www.boomi.com/connector/annotation"
+xmlns:ns3="http://exacttarget.com/wsdl/partnerAPI"
+xmlns:ns4="urn:fault.partner.exacttarget.com"
+xmlns:ns5="http://schemas.boomi.com/sap/edi_dc40"
+xmlns:ns6="http://schemas.microsoft.com/2003/10/Serialization/"
+deleted="false">
+  <Id>08638f71-5d4d-414a-8102-45d0b460fec7</Id>
+  <Type>transform.map</Type>
+  <Name>StateName Flat &gt;&gt; JSON</Name>
+  <Version>1</Version>
+  <FolderId name="Aspire System Consulting Pte Ltd/R and D/Devaraj/Flow Demo References/US States">
+  2222620</FolderId>
+  <AccountId>aspiresystemconsultingpte-41FMFS</AccountId>
+  <Properties />
+  <References>
+    <Ref compId="376db612-545c-4426-a81c-4d14c0ed4f25"
+    refId="fromProfile" name="New Flat File Profile" />
+    <Ref compId="a0b23b40-f6ed-46d3-9dfb-10d0d87c09a9"
+    refId="toProfile" name="Response-ArrayElement-StateName" />
+  </References>
+  <Description />
+  <Object>
+    <Map fromProfile="376db612-545c-4426-a81c-4d14c0ed4f25"
+    toProfile="a0b23b40-f6ed-46d3-9dfb-10d0d87c09a9">
+      <Mappings>
+        <Mapping fromKey="3"
+        fromKeyPath="*[@key='1']/*[@key='2']/*[@key='3']"
+        fromNamePath="Record/Elements/title" fromType="profile"
+        toKey="19"
+        toKeyPath="*[@key='1']/*[@key='16']/*[@key='17']/*[@key='18']/*[@key='19']"
+        toNamePath="Root/Object/results/Array/StateName"
+        toType="profile" />
+      </Mappings>
+      <Functions optimizeExecutionOrder="true" />
+      <Defaults />
+      <DocumentCacheJoins />
+    </Map>
+  </Object>
+</Component>

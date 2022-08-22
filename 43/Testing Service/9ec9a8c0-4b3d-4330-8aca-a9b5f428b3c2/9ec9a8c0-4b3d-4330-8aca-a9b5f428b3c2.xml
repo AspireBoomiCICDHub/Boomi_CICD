@@ -1,0 +1,206 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Component xmlns:ns2="http://www.boomi.com/connector/annotation"
+xmlns:ns3="http://exacttarget.com/wsdl/partnerAPI"
+xmlns:ns4="urn:fault.partner.exacttarget.com"
+xmlns:ns5="http://schemas.boomi.com/sap/edi_dc40"
+xmlns:ns6="http://schemas.microsoft.com/2003/10/Serialization/"
+deleted="false">
+  <Id>9ec9a8c0-4b3d-4330-8aca-a9b5f428b3c2</Id>
+  <Type>process</Type>
+  <Name>Testing Service</Name>
+  <Version>1</Version>
+  <FolderId name="Aspire System Consulting Pte Ltd/R and D/Devaraj/Flow Demo References/US States">
+  2222620</FolderId>
+  <AccountId>aspiresystemconsultingpte-41FMFS</AccountId>
+  <Properties>
+    <Property>
+      <Name>overrides-enabled</Name>
+      <Value>false</Value>
+    </Property>
+    <Property>
+      <Name>startshape-type</Name>
+      <Value>NOACTION</Value>
+    </Property>
+  </Properties>
+  <References>
+    <Ref compId="08638f71-5d4d-414a-8102-45d0b460fec7"
+    refId="shape7" name="StateName Flat &gt;&gt; JSON" />
+    <Ref compId="2c6607f3-87a9-44e7-b265-800b534633d0"
+    refId="shape10" name="StateObject: FF &gt;&gt; JSON" />
+  </References>
+  <Description />
+  <Object>
+    <process allowSimultaneous="false" enableUserLog="false"
+    processLogOnErrorOnly="false" purgeDataImmediately="false"
+    updateRunDates="true" workload="general">
+      <shapes>
+        <shape image="start" name="shape1" shapetype="start"
+        userlabel="" x="96.0" y="96.0">
+          <configuration>
+            <noaction />
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape1.dragpoint1" toShape="shape11"
+            x="288.0" y="265.0">
+              <linesegment length="0"
+              name="shape1.dragpoint1.lineseg1" orient="horizontal"
+              x="130.0" y="111.0" />
+              <linesegment length="0"
+              name="shape1.dragpoint1.lineseg2" orient="vertical"
+              x="130.0" y="111.0" />
+              <linesegment length="87"
+              name="shape1.dragpoint1.lineseg3" orient="horizontal"
+              x="130.0" y="111.0" />
+              <linesegment length="160"
+              name="shape1.dragpoint1.lineseg4" orient="vertical"
+              x="217.0" y="111.0" />
+              <linesegment length="71"
+              name="shape1.dragpoint1.lineseg5" orient="horizontal"
+              x="217.0" y="271.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape image="message_icon" name="shape8"
+        shapetype="message" userlabel="" x="304.0" y="96.0">
+          <configuration>
+            <message combined="false">
+              <msgTxt>Alabama Alaska Arizona Arkansas California
+              Colorado Connecticut Delaware Florida
+              Georgia</msgTxt>
+              <msgParameters />
+            </message>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape8.dragpoint1" toShape="shape7"
+            x="432.0" y="105.0">
+              <linesegment length="0"
+              name="shape8.dragpoint1.lineseg1" orient="horizontal"
+              x="338.0" y="111.0" />
+              <linesegment length="0"
+              name="shape8.dragpoint1.lineseg2" orient="vertical"
+              x="338.0" y="111.0" />
+              <linesegment length="55"
+              name="shape8.dragpoint1.lineseg3" orient="horizontal"
+              x="338.0" y="111.0" />
+              <linesegment length="0"
+              name="shape8.dragpoint1.lineseg4" orient="vertical"
+              x="393.0" y="111.0" />
+              <linesegment length="39"
+              name="shape8.dragpoint1.lineseg5" orient="horizontal"
+              x="393.0" y="111.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape image="map_icon" name="shape7" shapetype="map"
+        userlabel="" x="448.0" y="96.0">
+          <configuration>
+            <map mapId="08638f71-5d4d-414a-8102-45d0b460fec7" />
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape7.dragpoint1" toShape="shape9"
+            x="640.0" y="105.0">
+              <linesegment length="0"
+              name="shape7.dragpoint1.lineseg1" orient="horizontal"
+              x="482.0" y="111.0" />
+              <linesegment length="0"
+              name="shape7.dragpoint1.lineseg2" orient="vertical"
+              x="482.0" y="111.0" />
+              <linesegment length="87"
+              name="shape7.dragpoint1.lineseg3" orient="horizontal"
+              x="482.0" y="111.0" />
+              <linesegment length="0"
+              name="shape7.dragpoint1.lineseg4" orient="vertical"
+              x="569.0" y="111.0" />
+              <linesegment length="71"
+              name="shape7.dragpoint1.lineseg5" orient="horizontal"
+              x="569.0" y="111.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape image="returndocuments_icon" name="shape9"
+        shapetype="returndocuments" userlabel="" x="656.0"
+        y="96.0">
+          <configuration>
+            <returndocuments label="" />
+          </configuration>
+          <dragpoints />
+        </shape>
+        <shape image="map_icon" name="shape10" shapetype="map"
+        userlabel="" x="464.0" y="256.0">
+          <configuration>
+            <map mapId="2c6607f3-87a9-44e7-b265-800b534633d0" />
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape10.dragpoint1" toShape="shape12"
+            x="640.0" y="265.0">
+              <linesegment length="0"
+              name="shape10.dragpoint1.lineseg1"
+              orient="horizontal" x="498.0" y="271.0" />
+              <linesegment length="0"
+              name="shape10.dragpoint1.lineseg2" orient="vertical"
+              x="498.0" y="271.0" />
+              <linesegment length="79"
+              name="shape10.dragpoint1.lineseg3"
+              orient="horizontal" x="498.0" y="271.0" />
+              <linesegment length="0"
+              name="shape10.dragpoint1.lineseg4" orient="vertical"
+              x="577.0" y="271.0" />
+              <linesegment length="63"
+              name="shape10.dragpoint1.lineseg5"
+              orient="horizontal" x="577.0" y="271.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape image="returndocuments_icon" name="shape12"
+        shapetype="returndocuments" userlabel="" x="656.0"
+        y="256.0">
+          <configuration>
+            <returndocuments label="" />
+          </configuration>
+          <dragpoints />
+        </shape>
+        <shape image="message_icon" name="shape11"
+        shapetype="message" userlabel="" x="304.0" y="256.0">
+          <configuration>
+            <message combined="false">
+              <msgTxt>Alabama,AL Alaska,AK Arizona,AZ Arkansas,AR
+              California,CA Colorado,CO Connecticut,CT Delaware,DE
+              Florida,FL Georgia,GA Hawaii,HI Idaho,ID Illinois,IL
+              Indiana,IN Iowa,IA Kansas,KS Kentucky,KY Louisiana,LA
+              Maine,ME Maryland,MD Massachusetts,MA Michigan,MI
+              Minnesota,MN Mississippi,MS Missouri,MO Montana,MT
+              Nebraska,NE Nevada,NV New Hampshire,NH New Jersey,NJ
+              New Mexico,NM New York,NY North Carolina,NC North
+              Dakota,ND Ohio,OH Oklahoma,OK Oregon,OR
+              Pennsylvania,PA Rhode Island,RI South Carolina,SC
+              South Dakota,SD Tennessee,TN Texas,TX Utah,UT
+              Vermont,VT Virginia,VA Washington,WA West Virginia,WV
+              Wisconsin,WI Wyoming,WY</msgTxt>
+              <msgParameters />
+            </message>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape11.dragpoint1" toShape="shape10"
+            x="448.0" y="265.0">
+              <linesegment length="0"
+              name="shape11.dragpoint1.lineseg1"
+              orient="horizontal" x="338.0" y="271.0" />
+              <linesegment length="0"
+              name="shape11.dragpoint1.lineseg2" orient="vertical"
+              x="338.0" y="271.0" />
+              <linesegment length="63"
+              name="shape11.dragpoint1.lineseg3"
+              orient="horizontal" x="338.0" y="271.0" />
+              <linesegment length="0"
+              name="shape11.dragpoint1.lineseg4" orient="vertical"
+              x="401.0" y="271.0" />
+              <linesegment length="47"
+              name="shape11.dragpoint1.lineseg5"
+              orient="horizontal" x="401.0" y="271.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+      </shapes>
+    </process>
+  </Object>
+</Component>

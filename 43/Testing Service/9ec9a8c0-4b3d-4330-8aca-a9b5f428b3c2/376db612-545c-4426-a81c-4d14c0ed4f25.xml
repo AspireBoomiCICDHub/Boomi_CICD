@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Component xmlns:ns2="http://www.boomi.com/connector/annotation"
+xmlns:ns3="http://exacttarget.com/wsdl/partnerAPI"
+xmlns:ns4="urn:fault.partner.exacttarget.com"
+xmlns:ns5="http://schemas.boomi.com/sap/edi_dc40"
+xmlns:ns6="http://schemas.microsoft.com/2003/10/Serialization/"
+deleted="false">
+  <Id>376db612-545c-4426-a81c-4d14c0ed4f25</Id>
+  <Type>profile.flatfile</Type>
+  <Name>New Flat File Profile</Name>
+  <Version>1</Version>
+  <FolderId name="Aspire System Consulting Pte Ltd/R and D/Devaraj/Flow Demo References/US States">
+  2222620</FolderId>
+  <AccountId>aspiresystemconsultingpte-41FMFS</AccountId>
+  <Properties />
+  <References />
+  <Description />
+  <Object>
+    <FlatFileProfile modelVersion="2" strict="true">
+      <ProfileProperties>
+        <GeneralInfo fileType="delimited"
+        useColumnHeaders="false" />
+        <Options>
+          <DataOptions />
+          <DelimitedOptions fileDelimiter="stardelimited"
+          removeEscape="false" textQualifier="na" />
+        </Options>
+      </ProfileProperties>
+      <DataElements>
+        <FlatFileRecord detectFormat="numberofcolumns"
+        isNode="true" key="1" name="Record">
+          <FlatFileElements isNode="true" key="2" name="Elements">
+            <FlatFileElement dataType="character"
+            enforceUnique="false" identityValue=""
+            isMappable="true" isNode="true" justification="left"
+            key="3" mandatory="false" maxLength="0" minLength="0"
+            name="title" useToIdentifyFormat="false"
+            validateData="false">
+              <DataFormat>
+                <ProfileCharacterFormat />
+              </DataFormat>
+            </FlatFileElement>
+          </FlatFileElements>
+        </FlatFileRecord>
+      </DataElements>
+    </FlatFileProfile>
+  </Object>
+</Component>

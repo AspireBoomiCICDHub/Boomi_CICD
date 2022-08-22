@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Component xmlns:ns2="http://www.boomi.com/connector/annotation"
+xmlns:ns3="http://exacttarget.com/wsdl/partnerAPI"
+xmlns:ns4="urn:fault.partner.exacttarget.com"
+xmlns:ns5="http://schemas.boomi.com/sap/edi_dc40"
+xmlns:ns6="http://schemas.microsoft.com/2003/10/Serialization/"
+deleted="false">
+  <Id>a0b23b40-f6ed-46d3-9dfb-10d0d87c09a9</Id>
+  <Type>profile.json</Type>
+  <Name>Response-ArrayElement-StateName</Name>
+  <Version>1</Version>
+  <FolderId name="Aspire System Consulting Pte Ltd/R and D/Devaraj/Flow Demo References/US States">
+  2222620</FolderId>
+  <AccountId>aspiresystemconsultingpte-41FMFS</AccountId>
+  <Properties />
+  <References />
+  <Description />
+  <Object>
+    <JSONProfile>
+      <DataElements>
+        <JSONRootValue dataType="character" isMappable="false"
+        isNode="true" key="1" name="Root">
+          <DataFormat>
+            <ProfileCharacterFormat />
+          </DataFormat>
+          <JSONObject isMappable="false" isNode="true" key="16"
+          name="Object">
+            <JSONObjectEntry dataType="character"
+            isMappable="false" isNode="true" key="17"
+            name="results">
+              <DataFormat>
+                <ProfileCharacterFormat />
+              </DataFormat>
+              <JSONArray elementType="repeating" isMappable="false"
+              isNode="true" key="18" name="Array">
+                <JSONArrayElement dataType="character"
+                isMappable="true" isNode="true" key="19"
+                maxOccurs="-1" minOccurs="0" name="StateName">
+                  <DataFormat>
+                    <ProfileCharacterFormat />
+                  </DataFormat>
+                  <Qualifiers>
+                    <QualifierList />
+                  </Qualifiers>
+                </JSONArrayElement>
+              </JSONArray>
+              <Qualifiers>
+                <QualifierList />
+              </Qualifiers>
+            </JSONObjectEntry>
+          </JSONObject>
+          <Qualifiers>
+            <QualifierList />
+          </Qualifiers>
+        </JSONRootValue>
+      </DataElements>
+      <tagLists />
+    </JSONProfile>
+  </Object>
+</Component>
