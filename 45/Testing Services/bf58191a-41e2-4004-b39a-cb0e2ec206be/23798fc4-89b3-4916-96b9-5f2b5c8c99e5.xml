@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Component xmlns:ns2="http://www.boomi.com/connector/annotation"
+xmlns:ns3="http://exacttarget.com/wsdl/partnerAPI"
+xmlns:ns4="urn:fault.partner.exacttarget.com"
+xmlns:ns5="http://schemas.boomi.com/sap/edi_dc40"
+xmlns:ns6="http://schemas.microsoft.com/2003/10/Serialization/"
+deleted="false">
+  <Id>23798fc4-89b3-4916-96b9-5f2b5c8c99e5</Id>
+  <Type>profile.json</Type>
+  <Name>Customer Data &lt;Test&gt;</Name>
+  <Version>2</Version>
+  <FolderId name="Aspire System Consulting Pte Ltd/R and D/Deepika">
+  2465028</FolderId>
+  <AccountId>aspiresystemconsultingpte-41FMFS</AccountId>
+  <Properties />
+  <References />
+  <Description />
+  <Object>
+    <JSONProfile>
+      <DataElements>
+        <JSONRootValue key="1" name="Root" isNode="true"
+        isMappable="false" dataType="character"
+        validateData="false">
+          <DataFormat>
+            <ProfileCharacterFormat />
+          </DataFormat>
+          <JSONObject key="2" name="Object" isNode="true"
+          isMappable="false">
+            <JSONObjectEntry key="4" name="Entry1" isNode="true"
+            isMappable="true" dataType="character">
+              <DataFormat>
+                <ProfileCharacterFormat />
+              </DataFormat>
+            </JSONObjectEntry>
+            <JSONObjectEntry key="5" name="TestCaseID"
+            isNode="true" isMappable="true" dataType="character"
+            validateData="false">
+              <DataFormat>
+                <ProfileCharacterFormat />
+              </DataFormat>
+              <Qualifiers>
+                <QualifierList />
+              </Qualifiers>
+            </JSONObjectEntry>
+            <JSONObjectEntry key="6" name="ServiceName"
+            isNode="true" isMappable="true" dataType="character"
+            validateData="false">
+              <DataFormat>
+                <ProfileCharacterFormat />
+              </DataFormat>
+              <Qualifiers>
+                <QualifierList />
+              </Qualifiers>
+            </JSONObjectEntry>
+            <JSONObjectEntry key="7" name="Description"
+            isNode="true" isMappable="true" dataType="character"
+            validateData="false">
+              <DataFormat>
+                <ProfileCharacterFormat />
+              </DataFormat>
+              <Qualifiers>
+                <QualifierList />
+              </Qualifiers>
+            </JSONObjectEntry>
+            <JSONObjectEntry key="8" name="Result" isNode="true"
+            isMappable="true" dataType="character"
+            validateData="false">
+              <DataFormat>
+                <ProfileCharacterFormat />
+              </DataFormat>
+              <Qualifiers>
+                <QualifierList />
+              </Qualifiers>
+            </JSONObjectEntry>
+            <JSONObjectEntry key="9" name="ErrorMessage"
+            isNode="true" isMappable="true" dataType="character"
+            validateData="false">
+              <DataFormat>
+                <ProfileCharacterFormat />
+              </DataFormat>
+              <Qualifiers>
+                <QualifierList />
+              </Qualifiers>
+            </JSONObjectEntry>
+          </JSONObject>
+          <Qualifiers>
+            <QualifierList />
+          </Qualifiers>
+        </JSONRootValue>
+      </DataElements>
+      <tagLists />
+    </JSONProfile>
+  </Object>
+</Component>
