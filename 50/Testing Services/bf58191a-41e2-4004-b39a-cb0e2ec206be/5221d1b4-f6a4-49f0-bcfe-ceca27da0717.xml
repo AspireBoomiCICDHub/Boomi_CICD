@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Component xmlns:ns2="http://www.boomi.com/connector/annotation"
+xmlns:ns3="http://exacttarget.com/wsdl/partnerAPI"
+xmlns:ns4="urn:fault.partner.exacttarget.com"
+xmlns:ns5="http://schemas.boomi.com/sap/edi_dc40"
+xmlns:ns6="http://schemas.microsoft.com/2003/10/Serialization/"
+deleted="false">
+  <Id>5221d1b4-f6a4-49f0-bcfe-ceca27da0717</Id>
+  <Type>processproperty</Type>
+  <Name>Testing Service Test data</Name>
+  <Version>3</Version>
+  <FolderId name="Aspire System Consulting Pte Ltd/R and D/Deepika">
+  2465028</FolderId>
+  <AccountId>aspiresystemconsultingpte-41FMFS</AccountId>
+  <Properties />
+  <References />
+  <Description />
+  <Object>
+    <DefinedProcessProperties>
+      <definedProcessProperty key="5d80891b-054e-409e-9072-b94a8bbf1a12">
+
+        <helpText />
+        <label>Service1</label>
+        <type>string</type>
+        <defaultValue>Netsuite</defaultValue>
+        <allowedValues />
+        <persisted>false</persisted>
+      </definedProcessProperty>
+      <definedProcessProperty key="63858021-6cf1-4644-b249-2bdfa3fc576f">
+
+        <helpText />
+        <label>Service2</label>
+        <type>string</type>
+        <defaultValue>Salesforce</defaultValue>
+        <allowedValues />
+        <persisted>false</persisted>
+      </definedProcessProperty>
+      <definedProcessProperty key="d740c282-aaf9-407c-afbe-66ae4e522217">
+
+        <helpText />
+        <label>Service3</label>
+        <type>string</type>
+        <defaultValue>Flexera</defaultValue>
+        <allowedValues />
+        <persisted>false</persisted>
+      </definedProcessProperty>
+      <definedProcessProperty key="1385b999-4567-4b88-ab6c-86d0836c2066">
+
+        <helpText />
+        <label>Service4</label>
+        <type>string</type>
+        <defaultValue>Khoros</defaultValue>
+        <allowedValues />
+        <persisted>false</persisted>
+      </definedProcessProperty>
+      <definedProcessProperty key="80698fe8-666c-4bd4-953f-77195ddef2f4">
+
+        <helpText />
+        <label>Service5</label>
+        <type>string</type>
+        <defaultValue>Marketo</defaultValue>
+        <allowedValues />
+        <persisted>false</persisted>
+      </definedProcessProperty>
+      <definedProcessProperty key="a9503028-f60b-454e-8ce9-177c39684fbf">
+
+        <helpText />
+        <label>Service1(Pass/Fail)</label>
+        <type>string</type>
+        <defaultValue>Pass</defaultValue>
+        <allowedValues>
+          <allowedValueSet label="Pass" value="Pass" />
+          <allowedValueSet label="Fail" value="Fail" />
+        </allowedValues>
+        <persisted>false</persisted>
+      </definedProcessProperty>
+      <definedProcessProperty key="709a8b45-feb4-4f0a-b32e-7fbc7fe617d3">
+
+        <helpText />
+        <label>Service2(Pass/Fail)</label>
+        <type>string</type>
+        <defaultValue>Pass</defaultValue>
+        <allowedValues>
+          <allowedValueSet label="Pass" value="Pass" />
+          <allowedValueSet label="Fail" value="Fail" />
+        </allowedValues>
+        <persisted>false</persisted>
+      </definedProcessProperty>
+      <definedProcessProperty key="773a483c-7bbf-4c0c-b831-6d7cc88ab250">
+
+        <helpText />
+        <label>Service3(Pass/Fail)</label>
+        <type>string</type>
+        <defaultValue>Pass</defaultValue>
+        <allowedValues>
+          <allowedValueSet label="Pass" value="Pass" />
+          <allowedValueSet label="Fail" value="Fail" />
+        </allowedValues>
+        <persisted>false</persisted>
+      </definedProcessProperty>
+      <definedProcessProperty key="f7c756e6-eed6-4558-bc2c-08bdc28578aa">
+
+        <helpText />
+        <label>Service4(Pass/Fail)</label>
+        <type>string</type>
+        <defaultValue>Pass</defaultValue>
+        <allowedValues>
+          <allowedValueSet label="Pass" value="Pass" />
+          <allowedValueSet label="Fail" value="Fail" />
+        </allowedValues>
+        <persisted>false</persisted>
+      </definedProcessProperty>
+      <definedProcessProperty key="a619097f-ba9b-4cd4-b6eb-96bbaf16baf5">
+
+        <helpText />
+        <label>Service5(Pass/Fail)</label>
+        <type>string</type>
+        <defaultValue>Pass</defaultValue>
+        <allowedValues>
+          <allowedValueSet label="Pass" value="Pass" />
+          <allowedValueSet label="Fail" value="Fail" />
+        </allowedValues>
+        <persisted>false</persisted>
+      </definedProcessProperty>
+    </DefinedProcessProperties>
+  </Object>
+</Component>
