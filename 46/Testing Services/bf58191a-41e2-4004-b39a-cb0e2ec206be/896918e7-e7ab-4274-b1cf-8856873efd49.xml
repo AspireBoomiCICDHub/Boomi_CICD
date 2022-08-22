@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Component xmlns:ns2="http://www.boomi.com/connector/annotation"
+xmlns:ns3="http://exacttarget.com/wsdl/partnerAPI"
+xmlns:ns4="urn:fault.partner.exacttarget.com"
+xmlns:ns5="http://schemas.boomi.com/sap/edi_dc40"
+xmlns:ns6="http://schemas.microsoft.com/2003/10/Serialization/"
+deleted="false">
+  <Id>896918e7-e7ab-4274-b1cf-8856873efd49</Id>
+  <Type>transform.map</Type>
+  <Name>Customer Details</Name>
+  <Version>3</Version>
+  <FolderId name="Aspire System Consulting Pte Ltd/R and D/Deepika">
+  2465028</FolderId>
+  <AccountId>aspiresystemconsultingpte-41FMFS</AccountId>
+  <Properties />
+  <References>
+    <Ref compId="23798fc4-89b3-4916-96b9-5f2b5c8c99e5"
+    refId="fromProfile" name="Customer Data &lt;Test&gt;" />
+    <Ref compId="07b4db91-55cb-425e-a098-cb2251002bce"
+    refId="toProfile" name="Test Customer Details" />
+    <Ref compId="76af81b7-3409-42e3-be34-5789d1abc2f5"
+    refId="function-2" name="Test Case Pass/Fail" />
+  </References>
+  <Description />
+  <Object>
+    <Map fromProfile="23798fc4-89b3-4916-96b9-5f2b5c8c99e5"
+    toProfile="07b4db91-55cb-425e-a098-cb2251002bce">
+      <Mappings>
+        <Mapping fromType="profile" fromKey="6"
+        fromKeyPath="*[@key='1']/*[@key='2']/*[@key='6']"
+        fromNamePath="Root/Object/ServiceName" toType="profile"
+        toKey="7" toKeyPath="*[@key='1']/*[@key='2']/*[@key='7']"
+        toNamePath="Record/Elements/Service_Name" />
+        <Mapping fromType="profile" fromKey="7"
+        fromKeyPath="*[@key='1']/*[@key='2']/*[@key='7']"
+        fromNamePath="Root/Object/Description" toType="profile"
+        toKey="4" toKeyPath="*[@key='1']/*[@key='2']/*[@key='4']"
+        toNamePath="Record/Elements/Description" />
+        <Mapping fromType="profile" fromKey="8"
+        fromKeyPath="*[@key='1']/*[@key='2']/*[@key='8']"
+        fromNamePath="Root/Object/Result" toType="profile"
+        toKey="5" toKeyPath="*[@key='1']/*[@key='2']/*[@key='5']"
+        toNamePath="Record/Elements/Result" />
+        <Mapping fromType="profile" fromKey="9"
+        fromKeyPath="*[@key='1']/*[@key='2']/*[@key='9']"
+        fromNamePath="Root/Object/Errormessage" toType="profile"
+        toKey="6" toKeyPath="*[@key='1']/*[@key='2']/*[@key='6']"
+        toNamePath="Record/Elements/Error_Message" />
+        <Mapping fromType="profile" fromKey="5"
+        fromKeyPath="*[@key='1']/*[@key='2']/*[@key='5']"
+        fromNamePath="Root/Object/TestCaseID" toType="profile"
+        toKey="3" toKeyPath="*[@key='1']/*[@key='2']/*[@key='3']"
+        toNamePath="Record/Elements/TestCaseID" />
+        <Mapping fromType="profile" fromKey="8"
+        fromKeyPath="*[@key='1']/*[@key='2']/*[@key='8']"
+        fromNamePath="Root/Object/Result" toType="function"
+        toKey="1" toFunction="2" />
+      </Mappings>
+      <Functions optimizeExecutionOrder="true">
+        <FunctionStep key="2" position="2"
+        id="76af81b7-3409-42e3-be34-5789d1abc2f5"
+        name="Test Case Pass/Fail" type="userdefined" x="10.0"
+        y="10.0" category="userdefined">
+          <Inputs>
+            <Input key="1" name="Result" />
+          </Inputs>
+          <Outputs />
+          <Configuration />
+        </FunctionStep>
+      </Functions>
+      <Defaults />
+      <DocumentCacheJoins />
+    </Map>
+  </Object>
+</Component>
