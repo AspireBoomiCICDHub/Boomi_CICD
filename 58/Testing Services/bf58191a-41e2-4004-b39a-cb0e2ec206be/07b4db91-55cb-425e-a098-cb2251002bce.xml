@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Component xmlns:ns2="http://www.boomi.com/connector/annotation"
+xmlns:ns3="http://exacttarget.com/wsdl/partnerAPI"
+xmlns:ns4="urn:fault.partner.exacttarget.com"
+xmlns:ns5="http://schemas.boomi.com/sap/edi_dc40"
+xmlns:ns6="http://schemas.microsoft.com/2003/10/Serialization/"
+deleted="false">
+  <Id>07b4db91-55cb-425e-a098-cb2251002bce</Id>
+  <Type>profile.flatfile</Type>
+  <Name>Test Customer Details</Name>
+  <Version>2</Version>
+  <FolderId name="Aspire System Consulting Pte Ltd/R and D/Deepika">
+  2465028</FolderId>
+  <AccountId>aspiresystemconsultingpte-41FMFS</AccountId>
+  <Properties />
+  <References />
+  <Description />
+  <Object>
+    <FlatFileProfile strict="true" modelVersion="2">
+      <ProfileProperties>
+        <GeneralInfo useColumnHeaders="true"
+        fileType="delimited" />
+        <Options>
+          <DataOptions />
+          <DelimitedOptions fileDelimiter="commadelimited"
+          textQualifier="textqualifierdouble"
+          removeEscape="false" />
+        </Options>
+      </ProfileProperties>
+      <DataElements>
+        <FlatFileRecord key="1" name="Record"
+        detectFormat="numberofcolumns" isNode="true">
+          <FlatFileElements name="Elements" key="2" isNode="true">
+            <FlatFileElement key="3" name="TestCaseID"
+            dataType="character" mandatory="false"
+            justification="left" enforceUnique="false"
+            validateData="false" useToIdentifyFormat="false"
+            identityValue="" minLength="0" maxLength="0"
+            isNode="true" isMappable="true">
+              <DataFormat>
+                <ProfileCharacterFormat />
+              </DataFormat>
+            </FlatFileElement>
+            <FlatFileElement key="7" name="Service_Name"
+            dataType="character" mandatory="false"
+            justification="left" enforceUnique="false"
+            validateData="false" useToIdentifyFormat="false"
+            identityValue="" minLength="0" maxLength="0"
+            isNode="true" isMappable="true">
+              <DataFormat>
+                <ProfileCharacterFormat />
+              </DataFormat>
+            </FlatFileElement>
+            <FlatFileElement key="4" name="Description"
+            dataType="character" mandatory="false"
+            justification="left" enforceUnique="false"
+            validateData="false" useToIdentifyFormat="false"
+            identityValue="" minLength="0" maxLength="0"
+            isNode="true" isMappable="true">
+              <DataFormat>
+                <ProfileCharacterFormat />
+              </DataFormat>
+            </FlatFileElement>
+            <FlatFileElement key="5" name="Result"
+            dataType="character" mandatory="false"
+            justification="left" enforceUnique="false"
+            validateData="false" useToIdentifyFormat="false"
+            identityValue="" minLength="0" maxLength="0"
+            isNode="true" isMappable="true">
+              <DataFormat>
+                <ProfileCharacterFormat />
+              </DataFormat>
+            </FlatFileElement>
+            <FlatFileElement key="6" name="Error_Message"
+            dataType="character" mandatory="false"
+            justification="left" enforceUnique="false"
+            validateData="false" useToIdentifyFormat="false"
+            identityValue="" minLength="0" maxLength="0"
+            isNode="true" isMappable="true">
+              <DataFormat>
+                <ProfileCharacterFormat />
+              </DataFormat>
+            </FlatFileElement>
+          </FlatFileElements>
+        </FlatFileRecord>
+      </DataElements>
+    </FlatFileProfile>
+  </Object>
+</Component>
