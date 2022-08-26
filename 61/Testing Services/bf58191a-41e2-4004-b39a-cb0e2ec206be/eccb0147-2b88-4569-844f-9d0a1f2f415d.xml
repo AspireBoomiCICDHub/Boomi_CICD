@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Component xmlns:ns2="http://www.boomi.com/connector/annotation"
+xmlns:ns3="http://exacttarget.com/wsdl/partnerAPI"
+xmlns:ns4="urn:fault.partner.exacttarget.com"
+xmlns:ns5="http://schemas.boomi.com/sap/edi_dc40"
+xmlns:ns6="http://schemas.microsoft.com/2003/10/Serialization/"
+deleted="false">
+  <Id>eccb0147-2b88-4569-844f-9d0a1f2f415d</Id>
+  <Type>crossref</Type>
+  <Name>Test Case Lookup</Name>
+  <Version>10</Version>
+  <FolderId name="Aspire System Consulting Pte Ltd/R and D/Deepika">
+  2465028</FolderId>
+  <AccountId>aspiresystemconsultingpte-41FMFS</AccountId>
+  <Properties />
+  <References />
+  <Description />
+  <Object>
+    <CrossRefTable modelVersion="3" atomEnabled="false">
+      <ColumnHeaders>
+        <columnHeader>TSID</columnHeader>
+        <columnHeader>TestCaseID</columnHeader>
+        <columnHeader>TestCaseDescription</columnHeader>
+        <columnHeader>TestData (City)</columnHeader>
+        <columnHeader>TestData (Lat)</columnHeader>
+        <columnHeader>TestData (Lon)</columnHeader>
+        <columnHeader>CheckAgainst</columnHeader>
+        <columnHeader>IsActive</columnHeader>
+        <columnHeader>TestDocumentID</columnHeader>
+        <columnHeader>Severity</columnHeader>
+      </ColumnHeaders>
+      <Rows>
+        <row>
+          <Values>
+            <ref value="TS001" colIdx="0" />
+            <ref value="TC001" colIdx="1" />
+            <ref value="Check whether the given area is cloudy or not."
+            colIdx="2" />
+            <ref value="Mumbai" colIdx="3" />
+            <ref value="" colIdx="4" />
+            <ref value="" colIdx="5" />
+            <ref value="Clouds" colIdx="6" />
+            <ref value="Active" colIdx="7" />
+            <ref value="" colIdx="8" />
+            <ref value="Medium" colIdx="9" />
+          </Values>
+        </row>
+        <row>
+          <Values>
+            <ref value="TS002" colIdx="0" />
+            <ref value="TC002" colIdx="1" />
+            <ref value="Checking weather the visibility in the area is 3000 or more"
+            colIdx="2" />
+            <ref value="Delhi" colIdx="3" />
+            <ref value="" colIdx="4" />
+            <ref value="" colIdx="5" />
+            <ref value="3000" colIdx="6" />
+            <ref value="Active" colIdx="7" />
+            <ref value="" colIdx="8" />
+            <ref value="High" colIdx="9" />
+          </Values>
+        </row>
+        <row>
+          <Values>
+            <ref value="TS003" colIdx="0" />
+            <ref value="TC003" colIdx="1" />
+            <ref value="Checking weather the humidity in the given area is less then 100"
+            colIdx="2" />
+            <ref value="Chennai" colIdx="3" />
+            <ref value="" colIdx="4" />
+            <ref value="" colIdx="5" />
+            <ref value="100" colIdx="6" />
+            <ref value="In Active" colIdx="7" />
+            <ref value="" colIdx="8" />
+            <ref value="Low" colIdx="9" />
+          </Values>
+        </row>
+      </Rows>
+    </CrossRefTable>
+  </Object>
+</Component>

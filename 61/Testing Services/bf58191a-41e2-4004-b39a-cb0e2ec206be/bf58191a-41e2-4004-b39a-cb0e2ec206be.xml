@@ -1,0 +1,360 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Component xmlns:ns2="http://www.boomi.com/connector/annotation"
+xmlns:ns3="http://exacttarget.com/wsdl/partnerAPI"
+xmlns:ns4="urn:fault.partner.exacttarget.com"
+xmlns:ns5="http://schemas.boomi.com/sap/edi_dc40"
+xmlns:ns6="http://schemas.microsoft.com/2003/10/Serialization/"
+deleted="false">
+  <Id>bf58191a-41e2-4004-b39a-cb0e2ec206be</Id>
+  <Type>process</Type>
+  <Name>Testing Services</Name>
+  <Version>65</Version>
+  <FolderId name="Aspire System Consulting Pte Ltd/R and D/Deepika">
+  2465028</FolderId>
+  <AccountId>aspiresystemconsultingpte-41FMFS</AccountId>
+  <Properties>
+    <Property>
+      <Name>overrides-enabled</Name>
+      <Value>true</Value>
+    </Property>
+    <Property>
+      <Name>startshape-type</Name>
+      <Value>NOACTION</Value>
+    </Property>
+  </Properties>
+  <References>
+    <Ref compId="7c3a98ff-72ed-4de0-b57c-c53ca7fa8a8d"
+    refId="shape2" name="Test API Datas" />
+    <Ref compId="896918e7-e7ab-4274-b1cf-8856873efd49"
+    refId="shape25" name="New Customer Details" />
+    <Ref compId="07b4db91-55cb-425e-a098-cb2251002bce"
+    refId="shape29-parameter-0-profile"
+    name="Test Customer Details" />
+  </References>
+  <Description />
+  <Object>
+    <process allowSimultaneous="false" enableUserLog="false"
+    updateRunDates="true" processLogOnErrorOnly="false"
+    workload="general" purgeDataImmediately="false">
+      <shapes>
+        <shape name="shape1" userlabel="" image="start" x="48.0"
+        y="48.0" shapetype="start">
+          <configuration>
+            <noaction />
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape1.dragpoint1" toShape="shape3"
+            x="224.0" y="57.0">
+              <linesegment name="shape1.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="82.0" y="63.0" />
+              <linesegment name="shape1.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="82.0" y="63.0" />
+              <linesegment name="shape1.dragpoint1.lineseg3"
+              length="79" orient="horizontal" x="82.0" y="63.0" />
+              <linesegment name="shape1.dragpoint1.lineseg4"
+              length="0" orient="vertical" x="161.0" y="63.0" />
+              <linesegment name="shape1.dragpoint1.lineseg5"
+              length="63" orient="horizontal" x="161.0" y="63.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape2" userlabel="" image="processcall_icon"
+        x="624.0" y="48.0" shapetype="processcall">
+          <configuration>
+            <processcall processId="7c3a98ff-72ed-4de0-b57c-c53ca7fa8a8d"
+            wait="true" abort="true">
+              <parameters />
+              <returnpaths>
+                <returnpaths childShapeName="shape43"
+                returnLabel="" />
+              </returnpaths>
+            </processcall>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape2.dragpoint1" toShape="shape25"
+            identifier="shape43" x="800.0" y="57.0">
+              <linesegment name="shape2.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="658.0" y="63.0" />
+              <linesegment name="shape2.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="658.0" y="63.0" />
+              <linesegment name="shape2.dragpoint1.lineseg3"
+              length="79" orient="horizontal" x="658.0" y="63.0" />
+              <linesegment name="shape2.dragpoint1.lineseg4"
+              length="0" orient="vertical" x="737.0" y="63.0" />
+              <linesegment name="shape2.dragpoint1.lineseg5"
+              length="63" orient="horizontal" x="737.0" y="63.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape3" userlabel="Test Case IDs"
+        image="message_icon" x="240.0" y="48.0"
+        shapetype="message">
+          <configuration>
+            <message combined="false">
+              <msgTxt>1, 2, 3, 4, 5,</msgTxt>
+              <msgParameters />
+            </message>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape3.dragpoint1" toShape="shape4"
+            x="416.0" y="57.0">
+              <linesegment name="shape3.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="274.0" y="63.0" />
+              <linesegment name="shape3.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="274.0" y="63.0" />
+              <linesegment name="shape3.dragpoint1.lineseg3"
+              length="79" orient="horizontal" x="274.0" y="63.0" />
+              <linesegment name="shape3.dragpoint1.lineseg4"
+              length="0" orient="vertical" x="353.0" y="63.0" />
+              <linesegment name="shape3.dragpoint1.lineseg5"
+              length="63" orient="horizontal" x="353.0" y="63.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape4" userlabel="Split Document"
+        image="dataprocess_icon" x="432.0" y="48.0"
+        shapetype="dataprocess">
+          <configuration>
+            <dataprocess>
+              <step name="Split Documents" processtype="8"
+              index="1" key="1">
+                <documentsplit profileType="ff">
+                  <SplitOptions>
+                    <FFOptions splitOption="split_line"
+                    headersOption="none" />
+                  </SplitOptions>
+                </documentsplit>
+              </step>
+            </dataprocess>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape4.dragpoint1" toShape="shape2"
+            x="608.0" y="57.0">
+              <linesegment name="shape4.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="466.0" y="63.0" />
+              <linesegment name="shape4.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="466.0" y="63.0" />
+              <linesegment name="shape4.dragpoint1.lineseg3"
+              length="79" orient="horizontal" x="466.0" y="63.0" />
+              <linesegment name="shape4.dragpoint1.lineseg4"
+              length="0" orient="vertical" x="545.0" y="63.0" />
+              <linesegment name="shape4.dragpoint1.lineseg5"
+              length="63" orient="horizontal" x="545.0" y="63.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape6" userlabel=""
+        image="returndocuments_icon" x="1296.0" y="48.0"
+        shapetype="returndocuments">
+          <configuration>
+            <returndocuments label="" />
+          </configuration>
+          <dragpoints />
+        </shape>
+        <shape name="shape25" userlabel="" image="map_icon"
+        x="816.0" y="48.0" shapetype="map">
+          <configuration>
+            <map mapId="896918e7-e7ab-4274-b1cf-8856873efd49" />
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape25.dragpoint1" toShape="shape27"
+            x="944.0" y="57.0">
+              <linesegment name="shape25.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="850.0" y="63.0" />
+              <linesegment name="shape25.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="850.0" y="63.0" />
+              <linesegment name="shape25.dragpoint1.lineseg3"
+              length="55" orient="horizontal" x="850.0" y="63.0" />
+              <linesegment name="shape25.dragpoint1.lineseg4"
+              length="0" orient="vertical" x="905.0" y="63.0" />
+              <linesegment name="shape25.dragpoint1.lineseg5"
+              length="39" orient="horizontal" x="905.0" y="63.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape24" userlabel="Combine Document"
+        image="dataprocess_icon" x="1120.0" y="48.0"
+        shapetype="dataprocess">
+          <configuration>
+            <dataprocess>
+              <step name="Combine Documents" processtype="9"
+              index="1" key="1">
+                <dataprocesscombine profileType="flatfile">
+                  <FFOptions freeFormHeader="" freeFormFooter=""
+                  headersOption="retain" />
+                </dataprocesscombine>
+              </step>
+            </dataprocess>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape24.dragpoint1" toShape="shape6"
+            x="1280.0" y="57.0">
+              <linesegment name="shape24.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="1154.0" y="63.0" />
+              <linesegment name="shape24.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="1154.0" y="63.0" />
+              <linesegment name="shape24.dragpoint1.lineseg3"
+              length="71" orient="horizontal" x="1154.0"
+              y="63.0" />
+              <linesegment name="shape24.dragpoint1.lineseg4"
+              length="0" orient="vertical" x="1225.0" y="63.0" />
+              <linesegment name="shape24.dragpoint1.lineseg5"
+              length="55" orient="horizontal" x="1225.0"
+              y="63.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape27" userlabel="" image="branch_icon"
+        x="960.0" y="48.0" shapetype="branch">
+          <configuration>
+            <branch numBranches="2" />
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape27.dragpoint1" toShape="shape24"
+            identifier="1" text="1" x="1104.0" y="57.0">
+              <linesegment name="shape27.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="994.0" y="63.0" />
+              <linesegment name="shape27.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="994.0" y="63.0" />
+              <linesegment name="shape27.dragpoint1.lineseg3"
+              length="63" orient="horizontal" x="994.0" y="63.0" />
+              <linesegment name="shape27.dragpoint1.lineseg4"
+              length="0" orient="vertical" x="1057.0" y="63.0" />
+              <linesegment name="shape27.dragpoint1.lineseg5"
+              length="47" orient="horizontal" label="1" x="1057.0"
+              y="63.0" />
+            </dragpoint>
+            <dragpoint name="shape27.dragpoint2" toShape="shape28"
+            identifier="2" text="2" x="1088.0" y="169.0">
+              <linesegment name="shape27.dragpoint2.lineseg1"
+              length="0" orient="horizontal" x="994.0" y="63.0" />
+              <linesegment name="shape27.dragpoint2.lineseg2"
+              length="0" orient="vertical" x="994.0" y="63.0" />
+              <linesegment name="shape27.dragpoint2.lineseg3"
+              length="55" orient="horizontal" x="994.0" y="63.0" />
+              <linesegment name="shape27.dragpoint2.lineseg4"
+              length="112" orient="vertical" x="1049.0" y="63.0" />
+              <linesegment name="shape27.dragpoint2.lineseg5"
+              length="39" orient="horizontal" label="2" x="1049.0"
+              y="175.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape28" userlabel="" image="decision_icon"
+        x="1104.0" y="160.0" shapetype="decision">
+          <configuration>
+            <decision name="" comparison="equals">
+              <decisionvalue valueType="track">
+                <trackparameter propertyId="dynamicdocument.DDP_Error"
+                propertyName="Dynamic Document Property - DDP_Error"
+                defaultValue="" />
+              </decisionvalue>
+              <decisionvalue valueType="static">
+                <staticparameter staticproperty="1" />
+              </decisionvalue>
+            </decision>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape28.dragpoint1" toShape="shape29"
+            identifier="true" text="True" x="1280.0" y="249.0">
+              <linesegment name="shape28.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="1138.0"
+              y="175.0" />
+              <linesegment name="shape28.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="1138.0" y="175.0" />
+              <linesegment name="shape28.dragpoint1.lineseg3"
+              length="79" orient="horizontal" x="1138.0"
+              y="175.0" />
+              <linesegment name="shape28.dragpoint1.lineseg4"
+              length="80" orient="vertical" x="1217.0" y="175.0" />
+              <linesegment name="shape28.dragpoint1.lineseg5"
+              length="63" orient="horizontal" label="True"
+              x="1217.0" y="255.0" />
+            </dragpoint>
+            <dragpoint name="shape28.dragpoint2" toShape="shape30"
+            identifier="false" text="False" x="1328.0" y="169.0">
+              <linesegment name="shape28.dragpoint2.lineseg1"
+              length="0" orient="horizontal" x="1138.0"
+              y="175.0" />
+              <linesegment name="shape28.dragpoint2.lineseg2"
+              length="0" orient="vertical" x="1138.0" y="175.0" />
+              <linesegment name="shape28.dragpoint2.lineseg3"
+              length="103" orient="horizontal" x="1138.0"
+              y="175.0" />
+              <linesegment name="shape28.dragpoint2.lineseg4"
+              length="0" orient="vertical" x="1241.0" y="175.0" />
+              <linesegment name="shape28.dragpoint2.lineseg5"
+              length="87" orient="horizontal" label="False"
+              x="1241.0" y="175.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape29" userlabel="" image="exception_icon"
+        x="1296.0" y="240.0" shapetype="exception">
+          <configuration>
+            <exception title="" stopsingledoc="true"
+            stopProcessReturnSingleDoc="false">
+              <exMessage>{1}</exMessage>
+              <exParameters>
+                <parametervalue valueType="profile" key="0">
+                  <profileelement elementId="6"
+                  elementName="Error_Message (Record/Elements/Error_Message)"
+                  profileId="07b4db91-55cb-425e-a098-cb2251002bce"
+                  profileType="profile.flatfile" />
+                </parametervalue>
+              </exParameters>
+            </exception>
+          </configuration>
+          <dragpoints />
+        </shape>
+        <shape name="shape30" userlabel="" image="stop_icon"
+        x="1344.0" y="160.0" shapetype="stop">
+          <configuration>
+            <stop continue="true" />
+          </configuration>
+          <dragpoints />
+        </shape>
+      </shapes>
+    </process>
+  </Object>
+  <Overrides>
+    <Connections />
+    <PartnerOverrides />
+    <Properties />
+    <Extensions>
+      <ObjectDefinitions>
+        <unusedProfiles />
+      </ObjectDefinitions>
+      <DataMaps>
+        <unusedMaps />
+      </DataMaps>
+    </Extensions>
+    <CrossReferenceOverrides />
+    <PGPOverrides />
+    <DefinedProcessPropertyOverrides>
+      <OverrideableDefinedProcessPropertyComponent componentId="5221d1b4-f6a4-49f0-bcfe-ceca27da0717">
+
+        <OverrideableDefinedProcessPropertyValue key="5d80891b-054e-409e-9072-b94a8bbf1a12"
+        name="Service1" overrideable="true" />
+        <OverrideableDefinedProcessPropertyValue key="63858021-6cf1-4644-b249-2bdfa3fc576f"
+        name="Service2" overrideable="true" />
+        <OverrideableDefinedProcessPropertyValue key="d740c282-aaf9-407c-afbe-66ae4e522217"
+        name="Service3" overrideable="true" />
+        <OverrideableDefinedProcessPropertyValue key="1385b999-4567-4b88-ab6c-86d0836c2066"
+        name="Service4" overrideable="true" />
+        <OverrideableDefinedProcessPropertyValue key="80698fe8-666c-4bd4-953f-77195ddef2f4"
+        name="Service5" overrideable="true" />
+        <OverrideableDefinedProcessPropertyValue key="a9503028-f60b-454e-8ce9-177c39684fbf"
+        name="Service1(Pass/Fail)" overrideable="true" />
+        <OverrideableDefinedProcessPropertyValue key="709a8b45-feb4-4f0a-b32e-7fbc7fe617d3"
+        name="Service2(Pass/Fail)" overrideable="true" />
+        <OverrideableDefinedProcessPropertyValue key="773a483c-7bbf-4c0c-b831-6d7cc88ab250"
+        name="Service3(Pass/Fail)" overrideable="true" />
+        <OverrideableDefinedProcessPropertyValue key="f7c756e6-eed6-4558-bc2c-08bdc28578aa"
+        name="Service4(Pass/Fail)" overrideable="true" />
+        <OverrideableDefinedProcessPropertyValue key="a619097f-ba9b-4cd4-b6eb-96bbaf16baf5"
+        name="Service5(Pass/Fail)" overrideable="true" />
+      </OverrideableDefinedProcessPropertyComponent>
+    </DefinedProcessPropertyOverrides>
+  </Overrides>
+</Component>
