@@ -1,0 +1,1007 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Component xmlns:ns2="http://www.boomi.com/connector/annotation"
+xmlns:ns3="http://exacttarget.com/wsdl/partnerAPI"
+xmlns:ns4="urn:fault.partner.exacttarget.com"
+xmlns:ns5="http://schemas.boomi.com/sap/edi_dc40"
+xmlns:ns6="http://schemas.microsoft.com/2003/10/Serialization/"
+deleted="false">
+  <Id>542d75ea-530f-4be0-a53b-a6f63628e09b</Id>
+  <Type>process</Type>
+  <Name>EBS_Process</Name>
+  <Version>2</Version>
+  <FolderId name="Aspire System Consulting Pte Ltd/R and D/Deepika">
+  2465028</FolderId>
+  <AccountId>aspiresystemconsultingpte-41FMFS</AccountId>
+  <Properties>
+    <Property>
+      <Name>overrides-enabled</Name>
+      <Value>false</Value>
+    </Property>
+    <Property>
+      <Name>startshape-type</Name>
+      <Value>PASSTHROUGH</Value>
+    </Property>
+  </Properties>
+  <References>
+    <Ref compId="87618f8f-2814-4ded-b65d-6db5a7ee1950"
+    refId="shape4-profile" name="Test Customer Details" />
+    <Ref compId="5221d1b4-f6a4-49f0-bcfe-ceca27da0717"
+    refId="shape8-parameter-0-processproperty"
+    name="Testing Service Test data" />
+    <Ref compId="87618f8f-2814-4ded-b65d-6db5a7ee1950"
+    refId="shape18-profile" name="Test Customer Details" />
+    <Ref compId="87618f8f-2814-4ded-b65d-6db5a7ee1950"
+    refId="shape2-profile" name="Test Customer Details" />
+    <Ref compId="87618f8f-2814-4ded-b65d-6db5a7ee1950"
+    refId="shape3-profile" name="Test Customer Details" />
+    <Ref compId="5221d1b4-f6a4-49f0-bcfe-ceca27da0717"
+    refId="shape6-parameter-0-processproperty"
+    name="Testing Service Test data" />
+    <Ref compId="5221d1b4-f6a4-49f0-bcfe-ceca27da0717"
+    refId="shape6-parameter-3-processproperty"
+    name="Testing Service Test data" />
+    <Ref compId="a5742b15-0223-4ebc-adac-5e4d9d2ce64c"
+    refId="shape9-parameter-undefined-profile"
+    name="Customer ID" />
+    <Ref compId="5221d1b4-f6a4-49f0-bcfe-ceca27da0717"
+    refId="shape10-parameter-0-processproperty"
+    name="Testing Service Test data" />
+    <Ref compId="5221d1b4-f6a4-49f0-bcfe-ceca27da0717"
+    refId="shape11-parameter-0-processproperty"
+    name="Testing Service Test data" />
+    <Ref compId="5221d1b4-f6a4-49f0-bcfe-ceca27da0717"
+    refId="shape12-parameter-0-processproperty"
+    name="Testing Service Test data" />
+    <Ref compId="5221d1b4-f6a4-49f0-bcfe-ceca27da0717"
+    refId="shape13-parameter-0-processproperty"
+    name="Testing Service Test data" />
+    <Ref compId="87618f8f-2814-4ded-b65d-6db5a7ee1950"
+    refId="shape14-profile" name="Test Customer Details" />
+  </References>
+  <Description />
+  <Object>
+    <process allowSimultaneous="false" enableUserLog="false"
+    updateRunDates="false" processLogOnErrorOnly="false"
+    workload="general" purgeDataImmediately="false">
+      <shapes>
+        <shape name="shape1" userlabel="" image="start" x="96.0"
+        y="96.0" shapetype="start">
+          <configuration>
+            <passthroughaction />
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape1.dragpoint1" toShape="shape5"
+            x="320.0" y="105.0">
+              <linesegment name="shape1.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="130.0" y="111.0" />
+              <linesegment name="shape1.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="130.0" y="111.0" />
+              <linesegment name="shape1.dragpoint1.lineseg3"
+              length="103" orient="horizontal" x="130.0"
+              y="111.0" />
+              <linesegment name="shape1.dragpoint1.lineseg4"
+              length="0" orient="vertical" x="233.0" y="111.0" />
+              <linesegment name="shape1.dragpoint1.lineseg5"
+              length="87" orient="horizontal" x="233.0"
+              y="111.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape4" userlabel=""
+        image="businessrules_icon" x="928.0" y="240.0"
+        shapetype="businessrules">
+          <configuration>
+            <businessrules profileId="87618f8f-2814-4ded-b65d-6db5a7ee1950"
+            profileName="Test Customer Details"
+            profileType="profile.json">
+              <rule name="New Business Rule" key="1">
+                <input xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:type="BusinessRuleField" elementKey="12"
+                taglist="0"
+                name="ServiceName (Root/Object/ServiceName)"
+                alias="ServiceName" id="1" />
+                <condition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:type="GroupingCondition" operator="and">
+                  <nestedExpression xsi:type="SimpleCondition"
+                  operator="=">
+                    <leftInput xsi:type="FieldConditionInput"
+                    name="ServiceName" id="1" deleted="false" />
+                    <rightInput xsi:type="StaticConditionInput"
+                    value="Salesforce"
+                    name="&quot;Salesforce&quot;" id="0"
+                    deleted="false" />
+                  </nestedExpression>
+                </condition>
+                <errorMessage />
+              </rule>
+            </businessrules>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape4.dragpoint1" toShape="shape15"
+            identifier="Accepted" text="Accepted" x="1168.0"
+            y="217.0">
+              <linesegment name="shape4.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="962.0" y="255.0" />
+              <linesegment name="shape4.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="962.0" y="255.0" />
+              <linesegment name="shape4.dragpoint1.lineseg3"
+              length="111" orient="horizontal" x="962.0"
+              y="255.0" />
+              <linesegment name="shape4.dragpoint1.lineseg4"
+              length="32" orient="vertical" x="1073.0" y="223.0" />
+              <linesegment name="shape4.dragpoint1.lineseg5"
+              length="95" orient="horizontal" label="Accepted"
+              x="1073.0" y="223.0" />
+            </dragpoint>
+            <dragpoint name="shape4.dragpoint2" toShape="shape21"
+            identifier="Rejected" text="Rejected" x="1168.0"
+            y="281.0">
+              <linesegment name="shape4.dragpoint2.lineseg1"
+              length="0" orient="horizontal" x="962.0" y="255.0" />
+              <linesegment name="shape4.dragpoint2.lineseg2"
+              length="0" orient="vertical" x="962.0" y="255.0" />
+              <linesegment name="shape4.dragpoint2.lineseg3"
+              length="111" orient="horizontal" x="962.0"
+              y="255.0" />
+              <linesegment name="shape4.dragpoint2.lineseg4"
+              length="32" orient="vertical" x="1073.0" y="255.0" />
+              <linesegment name="shape4.dragpoint2.lineseg5"
+              length="95" orient="horizontal" label="Rejected"
+              x="1073.0" y="287.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape19" userlabel="Khoros Service"
+        image="message_icon" x="1216.0" y="480.0"
+        shapetype="message">
+          <configuration>
+            <message combined="false">
+              <msgTxt>'{ "TestCaseID":"4", "ServiceName":"Khoros",
+              "Description":"Check Data", "Result":"Pass"
+              }'</msgTxt>
+              <msgParameters />
+            </message>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape19.dragpoint1" toShape="shape16"
+            x="1520.0" y="361.0">
+              <linesegment name="shape19.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="1250.0"
+              y="495.0" />
+              <linesegment name="shape19.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="1250.0" y="495.0" />
+              <linesegment name="shape19.dragpoint1.lineseg3"
+              length="143" orient="horizontal" x="1250.0"
+              y="495.0" />
+              <linesegment name="shape19.dragpoint1.lineseg4"
+              length="128" orient="vertical" x="1393.0"
+              y="367.0" />
+              <linesegment name="shape19.dragpoint1.lineseg5"
+              length="127" orient="horizontal" x="1393.0"
+              y="367.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape20" userlabel="No NS Data"
+        image="message_icon" x="1216.0" y="160.0"
+        shapetype="message">
+          <configuration>
+            <message combined="false">
+              <msgTxt>'{ "TestCaseID":"1",
+              "ServiceName":"Netsuite", "Description":"",
+              "Result":"", "ErrorMessage":"There is no NS Data",
+              }'</msgTxt>
+              <msgParameters />
+            </message>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape20.dragpoint1" toShape="shape16"
+            x="1520.0" y="361.0">
+              <linesegment name="shape20.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="1250.0"
+              y="175.0" />
+              <linesegment name="shape20.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="1250.0" y="175.0" />
+              <linesegment name="shape20.dragpoint1.lineseg3"
+              length="143" orient="horizontal" x="1250.0"
+              y="175.0" />
+              <linesegment name="shape20.dragpoint1.lineseg4"
+              length="192" orient="vertical" x="1393.0"
+              y="175.0" />
+              <linesegment name="shape20.dragpoint1.lineseg5"
+              length="127" orient="horizontal" x="1393.0"
+              y="367.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape8" userlabel="NS Service"
+        image="message_icon" x="736.0" y="96.0"
+        shapetype="message">
+          <configuration>
+            <message combined="false">
+              <msgTxt>'{"ServiceName":"'{1}'"}'</msgTxt>
+              <msgParameters>
+                <parametervalue valueType="definedparameter"
+                key="0">
+                  <definedprocessparameter componentId="5221d1b4-f6a4-49f0-bcfe-ceca27da0717"
+                  componentName="Testing Service Test data"
+                  propertyKey="5d80891b-054e-409e-9072-b94a8bbf1a12"
+                  propertyLabel="Service1" />
+                </parametervalue>
+              </msgParameters>
+            </message>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape8.dragpoint1" toShape="shape14"
+            x="912.0" y="105.0">
+              <linesegment name="shape8.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="770.0" y="111.0" />
+              <linesegment name="shape8.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="770.0" y="111.0" />
+              <linesegment name="shape8.dragpoint1.lineseg3"
+              length="79" orient="horizontal" x="770.0"
+              y="111.0" />
+              <linesegment name="shape8.dragpoint1.lineseg4"
+              length="0" orient="vertical" x="849.0" y="111.0" />
+              <linesegment name="shape8.dragpoint1.lineseg5"
+              length="63" orient="horizontal" x="849.0"
+              y="111.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape22" userlabel="Flexera Service"
+        image="message_icon" x="1216.0" y="416.0"
+        shapetype="message">
+          <configuration>
+            <message combined="false">
+              <msgTxt>'{ "TestCaseID":"3", "ServiceName":"Flexera",
+              "Description":"", "Result":"", "ErrorMessage":"There
+              is no Flexera Data" }'</msgTxt>
+              <msgParameters />
+            </message>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape22.dragpoint1" toShape="shape16"
+            x="1520.0" y="361.0">
+              <linesegment name="shape22.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="1250.0"
+              y="431.0" />
+              <linesegment name="shape22.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="1250.0" y="431.0" />
+              <linesegment name="shape22.dragpoint1.lineseg3"
+              length="143" orient="horizontal" x="1250.0"
+              y="431.0" />
+              <linesegment name="shape22.dragpoint1.lineseg4"
+              length="64" orient="vertical" x="1393.0" y="367.0" />
+              <linesegment name="shape22.dragpoint1.lineseg5"
+              length="127" orient="horizontal" x="1393.0"
+              y="367.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape21" userlabel="No SF Data"
+        image="message_icon" x="1184.0" y="272.0"
+        shapetype="message">
+          <configuration>
+            <message combined="false">
+              <msgTxt>'{ "TestCaseID":"2",
+              "ServiceName":"Salesforce", "Description":"",
+              "Result":"", "ErrorMessage":"There is no SF Data"
+              }'</msgTxt>
+              <msgParameters />
+            </message>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape21.dragpoint1" toShape="shape16"
+            x="1520.0" y="361.0">
+              <linesegment name="shape21.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="1218.0"
+              y="287.0" />
+              <linesegment name="shape21.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="1218.0" y="287.0" />
+              <linesegment name="shape21.dragpoint1.lineseg3"
+              length="159" orient="horizontal" x="1218.0"
+              y="287.0" />
+              <linesegment name="shape21.dragpoint1.lineseg4"
+              length="80" orient="vertical" x="1377.0" y="287.0" />
+              <linesegment name="shape21.dragpoint1.lineseg5"
+              length="143" orient="horizontal" x="1377.0"
+              y="367.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape18" userlabel=""
+        image="businessrules_icon" x="928.0" y="576.0"
+        shapetype="businessrules">
+          <configuration>
+            <businessrules profileId="87618f8f-2814-4ded-b65d-6db5a7ee1950"
+            profileName="Test Customer Details"
+            profileType="profile.json">
+              <rule name="New Business Rule" key="1">
+                <input xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:type="BusinessRuleField" elementKey="12"
+                taglist="0"
+                name="ServiceName (Root/Object/ServiceName)"
+                alias="ServiceName" id="1" />
+                <condition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:type="GroupingCondition" operator="and">
+                  <nestedExpression xsi:type="SimpleCondition"
+                  operator="=">
+                    <leftInput xsi:type="FieldConditionInput"
+                    name="ServiceName" id="1" deleted="false" />
+                    <rightInput xsi:type="StaticConditionInput"
+                    value="Marketo" name="&quot;Marketo&quot;"
+                    id="0" deleted="false" />
+                  </nestedExpression>
+                </condition>
+                <errorMessage />
+              </rule>
+            </businessrules>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape18.dragpoint1" toShape="shape6"
+            identifier="Accepted" text="Accepted" x="1200.0"
+            y="585.0">
+              <linesegment name="shape18.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="962.0" y="591.0" />
+              <linesegment name="shape18.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="962.0" y="591.0" />
+              <linesegment name="shape18.dragpoint1.lineseg3"
+              length="127" orient="horizontal" x="962.0"
+              y="591.0" />
+              <linesegment name="shape18.dragpoint1.lineseg4"
+              length="0" orient="vertical" x="1089.0" y="591.0" />
+              <linesegment name="shape18.dragpoint1.lineseg5"
+              length="111" orient="horizontal" label="Accepted"
+              x="1089.0" y="591.0" />
+            </dragpoint>
+            <dragpoint name="shape18.dragpoint2" toShape="unset"
+            identifier="Rejected" text="Rejected" x="1200.0"
+            y="649.0">
+              <linesegment name="shape18.dragpoint2.lineseg1"
+              length="0" orient="horizontal" x="962.0" y="591.0" />
+              <linesegment name="shape18.dragpoint2.lineseg2"
+              length="0" orient="vertical" x="962.0" y="591.0" />
+              <linesegment name="shape18.dragpoint2.lineseg3"
+              length="127" orient="horizontal" x="962.0"
+              y="591.0" />
+              <linesegment name="shape18.dragpoint2.lineseg4"
+              length="64" orient="vertical" x="1089.0" y="591.0" />
+              <linesegment name="shape18.dragpoint2.lineseg5"
+              length="111" orient="horizontal" label="Rejected"
+              x="1089.0" y="655.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape16" userlabel=""
+        image="returndocuments_icon" x="1536.0" y="352.0"
+        shapetype="returndocuments">
+          <configuration>
+            <returndocuments label="" />
+          </configuration>
+          <dragpoints />
+        </shape>
+        <shape name="shape2" userlabel=""
+        image="businessrules_icon" x="928.0" y="352.0"
+        shapetype="businessrules">
+          <configuration>
+            <businessrules profileId="87618f8f-2814-4ded-b65d-6db5a7ee1950"
+            profileName="Test Customer Details"
+            profileType="profile.json">
+              <rule name="New Business Rule" key="1">
+                <input xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:type="BusinessRuleField" elementKey="12"
+                taglist="0"
+                name="ServiceName (Root/Object/ServiceName)"
+                alias="ServiceName" id="1" />
+                <condition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:type="GroupingCondition" operator="and">
+                  <nestedExpression xsi:type="SimpleCondition"
+                  operator="=">
+                    <leftInput xsi:type="FieldConditionInput"
+                    name="ServiceName" id="1" deleted="false" />
+                    <rightInput xsi:type="StaticConditionInput"
+                    value="Flexera" name="&quot;Flexera&quot;"
+                    id="0" deleted="false" />
+                  </nestedExpression>
+                </condition>
+                <errorMessage />
+              </rule>
+            </businessrules>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape2.dragpoint1" toShape="shape17"
+            identifier="Accepted" text="Accepted" x="1200.0"
+            y="361.0">
+              <linesegment name="shape2.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="962.0" y="367.0" />
+              <linesegment name="shape2.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="962.0" y="367.0" />
+              <linesegment name="shape2.dragpoint1.lineseg3"
+              length="127" orient="horizontal" x="962.0"
+              y="367.0" />
+              <linesegment name="shape2.dragpoint1.lineseg4"
+              length="0" orient="vertical" x="1089.0" y="367.0" />
+              <linesegment name="shape2.dragpoint1.lineseg5"
+              length="111" orient="horizontal" label="Accepted"
+              x="1089.0" y="367.0" />
+            </dragpoint>
+            <dragpoint name="shape2.dragpoint2" toShape="shape22"
+            identifier="Rejected" text="Rejected" x="1200.0"
+            y="425.0">
+              <linesegment name="shape2.dragpoint2.lineseg1"
+              length="0" orient="horizontal" x="962.0" y="367.0" />
+              <linesegment name="shape2.dragpoint2.lineseg2"
+              length="0" orient="vertical" x="962.0" y="367.0" />
+              <linesegment name="shape2.dragpoint2.lineseg3"
+              length="127" orient="horizontal" x="962.0"
+              y="367.0" />
+              <linesegment name="shape2.dragpoint2.lineseg4"
+              length="64" orient="vertical" x="1089.0" y="367.0" />
+              <linesegment name="shape2.dragpoint2.lineseg5"
+              length="111" orient="horizontal" label="Rejected"
+              x="1089.0" y="431.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape3" userlabel=""
+        image="businessrules_icon" x="928.0" y="480.0"
+        shapetype="businessrules">
+          <configuration>
+            <businessrules profileId="87618f8f-2814-4ded-b65d-6db5a7ee1950"
+            profileName="Test Customer Details"
+            profileType="profile.json">
+              <rule name="New Business Rule" key="1">
+                <input xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:type="BusinessRuleField" elementKey="12"
+                taglist="0"
+                name="ServiceName (Root/Object/ServiceName)"
+                alias="ServiceName" id="1" />
+                <condition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:type="GroupingCondition" operator="and">
+                  <nestedExpression xsi:type="SimpleCondition"
+                  operator="=">
+                    <leftInput xsi:type="FieldConditionInput"
+                    name="ServiceName" id="1" deleted="false" />
+                    <rightInput xsi:type="StaticConditionInput"
+                    value="Khoros" name="&quot;Khoros&quot;" id="0"
+                    deleted="false" />
+                  </nestedExpression>
+                </condition>
+                <errorMessage />
+              </rule>
+            </businessrules>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape3.dragpoint1" toShape="shape19"
+            identifier="Accepted" text="Accepted" x="1200.0"
+            y="489.0">
+              <linesegment name="shape3.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="962.0" y="495.0" />
+              <linesegment name="shape3.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="962.0" y="495.0" />
+              <linesegment name="shape3.dragpoint1.lineseg3"
+              length="127" orient="horizontal" x="962.0"
+              y="495.0" />
+              <linesegment name="shape3.dragpoint1.lineseg4"
+              length="0" orient="vertical" x="1089.0" y="495.0" />
+              <linesegment name="shape3.dragpoint1.lineseg5"
+              length="111" orient="horizontal" label="Accepted"
+              x="1089.0" y="495.0" />
+            </dragpoint>
+            <dragpoint name="shape3.dragpoint2" toShape="unset"
+            identifier="Rejected" text="Rejected" x="1200.0"
+            y="553.0">
+              <linesegment name="shape3.dragpoint2.lineseg1"
+              length="0" orient="horizontal" x="962.0" y="495.0" />
+              <linesegment name="shape3.dragpoint2.lineseg2"
+              length="0" orient="vertical" x="962.0" y="495.0" />
+              <linesegment name="shape3.dragpoint2.lineseg3"
+              length="127" orient="horizontal" x="962.0"
+              y="495.0" />
+              <linesegment name="shape3.dragpoint2.lineseg4"
+              length="64" orient="vertical" x="1089.0" y="495.0" />
+              <linesegment name="shape3.dragpoint2.lineseg5"
+              length="111" orient="horizontal" label="Rejected"
+              x="1089.0" y="559.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape5" userlabel="" image="flowcontrol_icon"
+        x="336.0" y="96.0" shapetype="flowcontrol">
+          <configuration>
+            <flowcontrol forEachCount="1" chunks="0"
+            chunkStyle="threadOnly" />
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape5.dragpoint1" toShape="shape9"
+            x="528.0" y="105.0">
+              <linesegment name="shape5.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="370.0" y="111.0" />
+              <linesegment name="shape5.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="370.0" y="111.0" />
+              <linesegment name="shape5.dragpoint1.lineseg3"
+              length="87" orient="horizontal" x="370.0"
+              y="111.0" />
+              <linesegment name="shape5.dragpoint1.lineseg4"
+              length="0" orient="vertical" x="457.0" y="111.0" />
+              <linesegment name="shape5.dragpoint1.lineseg5"
+              length="71" orient="horizontal" x="457.0"
+              y="111.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape6" userlabel="Marketo Service"
+        image="message_icon" x="1216.0" y="576.0"
+        shapetype="message">
+          <configuration>
+            <message combined="false">
+              <msgTxt>'{ "TestCaseID":"5", "ServiceName":"Marketo",
+              "Description":"Check Data", "Result":"Pass"
+              }'</msgTxt>
+              <msgParameters>
+                <parametervalue valueType="definedparameter"
+                key="0">
+                  <definedprocessparameter componentId="5221d1b4-f6a4-49f0-bcfe-ceca27da0717"
+                  componentName="Testing Service Test data"
+                  propertyKey="80698fe8-666c-4bd4-953f-77195ddef2f4"
+                  propertyLabel="Service5" />
+                </parametervalue>
+                <parametervalue valueType="static" key="2">
+                  <staticparameter staticproperty="Check if Marketo Data" />
+                </parametervalue>
+                <parametervalue valueType="definedparameter"
+                key="3">
+                  <definedprocessparameter componentId="5221d1b4-f6a4-49f0-bcfe-ceca27da0717"
+                  componentName="Testing Service Test data"
+                  propertyKey="a619097f-ba9b-4cd4-b6eb-96bbaf16baf5"
+                  propertyLabel="Service5(Pass/Fail)" />
+                </parametervalue>
+                <parametervalue valueType="static" key="5">
+                  <staticparameter staticproperty="This is not Marketo data" />
+                </parametervalue>
+              </msgParameters>
+            </message>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape6.dragpoint1" toShape="shape16"
+            x="1520.0" y="361.0">
+              <linesegment name="shape6.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="1250.0"
+              y="591.0" />
+              <linesegment name="shape6.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="1250.0" y="591.0" />
+              <linesegment name="shape6.dragpoint1.lineseg3"
+              length="143" orient="horizontal" x="1250.0"
+              y="591.0" />
+              <linesegment name="shape6.dragpoint1.lineseg4"
+              length="224" orient="vertical" x="1393.0"
+              y="367.0" />
+              <linesegment name="shape6.dragpoint1.lineseg5"
+              length="127" orient="horizontal" x="1393.0"
+              y="367.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape7" userlabel="NS Data"
+        image="message_icon" x="1216.0" y="96.0"
+        shapetype="message">
+          <configuration>
+            <message combined="false">
+              <msgTxt>'{ "TestCaseID":"1",
+              "ServiceName":"Netsuite", "Description":"Check Data",
+              "Result":"Pass" }'</msgTxt>
+              <msgParameters />
+            </message>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape7.dragpoint1" toShape="shape16"
+            x="1520.0" y="361.0">
+              <linesegment name="shape7.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="1250.0"
+              y="111.0" />
+              <linesegment name="shape7.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="1250.0" y="111.0" />
+              <linesegment name="shape7.dragpoint1.lineseg3"
+              length="143" orient="horizontal" x="1250.0"
+              y="111.0" />
+              <linesegment name="shape7.dragpoint1.lineseg4"
+              length="256" orient="vertical" x="1393.0"
+              y="111.0" />
+              <linesegment name="shape7.dragpoint1.lineseg5"
+              length="127" orient="horizontal" x="1393.0"
+              y="367.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape9" userlabel="" image="route_icon"
+        x="544.0" y="96.0" shapetype="route">
+          <configuration>
+            <route>
+              <routeproperty valueType="profile">
+                <profileelement elementId="3"
+                elementName="TestCaseID (Record/Elements/TestCaseID)"
+                profileId="a5742b15-0223-4ebc-adac-5e4d9d2ce64c"
+                profileType="profile.flatfile" />
+              </routeproperty>
+              <routevalues>
+                <routevalue qualifier="equals" name="Equal To 1"
+                key="3" value="1" />
+                <routevalue qualifier="equals" name="Equal To 2"
+                key="5" value="2" />
+                <routevalue qualifier="equals" name="Equal To 3"
+                key="7" value="3" />
+                <routevalue qualifier="equals" name="Equal To 4"
+                key="8" value="4" />
+                <routevalue qualifier="equals" name="Equal To 5"
+                key="9" value="5" />
+              </routevalues>
+            </route>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape9.dragpoint1" toShape="shape8"
+            identifier="3" text="1 - Equal To 1" x="720.0"
+            y="105.0">
+              <linesegment name="shape9.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="578.0" y="111.0" />
+              <linesegment name="shape9.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="578.0" y="111.0" />
+              <linesegment name="shape9.dragpoint1.lineseg3"
+              length="79" orient="horizontal" x="578.0"
+              y="111.0" />
+              <linesegment name="shape9.dragpoint1.lineseg4"
+              length="0" orient="vertical" x="657.0" y="111.0" />
+              <linesegment name="shape9.dragpoint1.lineseg5"
+              length="63" orient="horizontal"
+              label="1 - Equal To 1" x="657.0" y="111.0" />
+            </dragpoint>
+            <dragpoint name="shape9.dragpoint2" toShape="unset"
+            identifier="default" text="Default" x="723.0"
+            y="649.0">
+              <linesegment name="shape9.dragpoint2.lineseg1"
+              length="0" orient="horizontal" x="578.0" y="111.0" />
+              <linesegment name="shape9.dragpoint2.lineseg2"
+              length="0" orient="vertical" x="578.0" y="111.0" />
+              <linesegment name="shape9.dragpoint2.lineseg3"
+              length="80" orient="horizontal" x="578.0"
+              y="111.0" />
+              <linesegment name="shape9.dragpoint2.lineseg4"
+              length="544" orient="vertical" x="658.0" y="111.0" />
+              <linesegment name="shape9.dragpoint2.lineseg5"
+              length="65" orient="horizontal" label="Default"
+              x="658.0" y="655.0" />
+            </dragpoint>
+            <dragpoint name="shape9.dragpoint3" toShape="shape10"
+            identifier="5" text="2 - Equal To 2" x="720.0"
+            y="249.0">
+              <linesegment name="shape9.dragpoint3.lineseg1"
+              length="0" orient="horizontal" x="578.0" y="111.0" />
+              <linesegment name="shape9.dragpoint3.lineseg2"
+              length="0" orient="vertical" x="578.0" y="111.0" />
+              <linesegment name="shape9.dragpoint3.lineseg3"
+              length="79" orient="horizontal" x="578.0"
+              y="111.0" />
+              <linesegment name="shape9.dragpoint3.lineseg4"
+              length="144" orient="vertical" x="657.0" y="111.0" />
+              <linesegment name="shape9.dragpoint3.lineseg5"
+              length="63" orient="horizontal"
+              label="2 - Equal To 2" x="657.0" y="255.0" />
+            </dragpoint>
+            <dragpoint name="shape9.dragpoint4" toShape="shape11"
+            identifier="7" text="3 - Equal To 3" x="720.0"
+            y="361.0">
+              <linesegment name="shape9.dragpoint4.lineseg1"
+              length="0" orient="horizontal" x="578.0" y="111.0" />
+              <linesegment name="shape9.dragpoint4.lineseg2"
+              length="0" orient="vertical" x="578.0" y="111.0" />
+              <linesegment name="shape9.dragpoint4.lineseg3"
+              length="79" orient="horizontal" x="578.0"
+              y="111.0" />
+              <linesegment name="shape9.dragpoint4.lineseg4"
+              length="256" orient="vertical" x="657.0" y="111.0" />
+              <linesegment name="shape9.dragpoint4.lineseg5"
+              length="63" orient="horizontal"
+              label="3 - Equal To 3" x="657.0" y="367.0" />
+            </dragpoint>
+            <dragpoint name="shape9.dragpoint5" toShape="shape12"
+            identifier="8" text="4 - Equal To 4" x="720.0"
+            y="489.0">
+              <linesegment name="shape9.dragpoint5.lineseg1"
+              length="0" orient="horizontal" x="578.0" y="111.0" />
+              <linesegment name="shape9.dragpoint5.lineseg2"
+              length="0" orient="vertical" x="578.0" y="111.0" />
+              <linesegment name="shape9.dragpoint5.lineseg3"
+              length="79" orient="horizontal" x="578.0"
+              y="111.0" />
+              <linesegment name="shape9.dragpoint5.lineseg4"
+              length="384" orient="vertical" x="657.0" y="111.0" />
+              <linesegment name="shape9.dragpoint5.lineseg5"
+              length="63" orient="horizontal"
+              label="4 - Equal To 4" x="657.0" y="495.0" />
+            </dragpoint>
+            <dragpoint name="shape9.dragpoint6" toShape="shape13"
+            identifier="9" text="5 - Equal To 5" x="720.0"
+            y="585.0">
+              <linesegment name="shape9.dragpoint6.lineseg1"
+              length="0" orient="horizontal" x="578.0" y="111.0" />
+              <linesegment name="shape9.dragpoint6.lineseg2"
+              length="0" orient="vertical" x="578.0" y="111.0" />
+              <linesegment name="shape9.dragpoint6.lineseg3"
+              length="79" orient="horizontal" x="578.0"
+              y="111.0" />
+              <linesegment name="shape9.dragpoint6.lineseg4"
+              length="480" orient="vertical" x="657.0" y="111.0" />
+              <linesegment name="shape9.dragpoint6.lineseg5"
+              length="63" orient="horizontal"
+              label="5 - Equal To 5" x="657.0" y="591.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape10" userlabel="Salesforce Service"
+        image="message_icon" x="736.0" y="240.0"
+        shapetype="message">
+          <configuration>
+            <message combined="false">
+              <msgTxt>'{"ServiceName":"'{1}'"}'</msgTxt>
+              <msgParameters>
+                <parametervalue valueType="definedparameter"
+                key="0">
+                  <definedprocessparameter componentId="5221d1b4-f6a4-49f0-bcfe-ceca27da0717"
+                  componentName="Testing Service Test data"
+                  propertyKey="63858021-6cf1-4644-b249-2bdfa3fc576f"
+                  propertyLabel="Service2" />
+                </parametervalue>
+              </msgParameters>
+            </message>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape10.dragpoint1" toShape="shape4"
+            x="912.0" y="249.0">
+              <linesegment name="shape10.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="770.0" y="255.0" />
+              <linesegment name="shape10.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="770.0" y="255.0" />
+              <linesegment name="shape10.dragpoint1.lineseg3"
+              length="79" orient="horizontal" x="770.0"
+              y="255.0" />
+              <linesegment name="shape10.dragpoint1.lineseg4"
+              length="0" orient="vertical" x="849.0" y="255.0" />
+              <linesegment name="shape10.dragpoint1.lineseg5"
+              length="63" orient="horizontal" x="849.0"
+              y="255.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape11" userlabel="Flexera Service"
+        image="message_icon" x="736.0" y="352.0"
+        shapetype="message">
+          <configuration>
+            <message combined="false">
+              <msgTxt>'{ "ServiceName":"'{1}'"}'</msgTxt>
+              <msgParameters>
+                <parametervalue valueType="definedparameter"
+                key="0">
+                  <definedprocessparameter componentId="5221d1b4-f6a4-49f0-bcfe-ceca27da0717"
+                  componentName="Testing Service Test data"
+                  propertyKey="d740c282-aaf9-407c-afbe-66ae4e522217"
+                  propertyLabel="Service3" />
+                </parametervalue>
+              </msgParameters>
+            </message>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape11.dragpoint1" toShape="shape2"
+            x="912.0" y="361.0">
+              <linesegment name="shape11.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="770.0" y="367.0" />
+              <linesegment name="shape11.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="770.0" y="367.0" />
+              <linesegment name="shape11.dragpoint1.lineseg3"
+              length="79" orient="horizontal" x="770.0"
+              y="367.0" />
+              <linesegment name="shape11.dragpoint1.lineseg4"
+              length="0" orient="vertical" x="849.0" y="367.0" />
+              <linesegment name="shape11.dragpoint1.lineseg5"
+              length="63" orient="horizontal" x="849.0"
+              y="367.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape12" userlabel="Khoros Service"
+        image="message_icon" x="736.0" y="480.0"
+        shapetype="message">
+          <configuration>
+            <message combined="false">
+              <msgTxt>'{ "ServiceName":"'{1}'"}'</msgTxt>
+              <msgParameters>
+                <parametervalue valueType="definedparameter"
+                key="0">
+                  <definedprocessparameter componentId="5221d1b4-f6a4-49f0-bcfe-ceca27da0717"
+                  componentName="Testing Service Test data"
+                  propertyKey="1385b999-4567-4b88-ab6c-86d0836c2066"
+                  propertyLabel="Service4" />
+                </parametervalue>
+              </msgParameters>
+            </message>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape12.dragpoint1" toShape="shape3"
+            x="912.0" y="489.0">
+              <linesegment name="shape12.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="770.0" y="495.0" />
+              <linesegment name="shape12.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="770.0" y="495.0" />
+              <linesegment name="shape12.dragpoint1.lineseg3"
+              length="79" orient="horizontal" x="770.0"
+              y="495.0" />
+              <linesegment name="shape12.dragpoint1.lineseg4"
+              length="0" orient="vertical" x="849.0" y="495.0" />
+              <linesegment name="shape12.dragpoint1.lineseg5"
+              length="63" orient="horizontal" x="849.0"
+              y="495.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape13" userlabel="Marketo Service"
+        image="message_icon" x="736.0" y="576.0"
+        shapetype="message">
+          <configuration>
+            <message combined="false">
+              <msgTxt>'{"ServiceName":"'{1}'"}'</msgTxt>
+              <msgParameters>
+                <parametervalue valueType="definedparameter"
+                key="0">
+                  <definedprocessparameter componentId="5221d1b4-f6a4-49f0-bcfe-ceca27da0717"
+                  componentName="Testing Service Test data"
+                  propertyKey="80698fe8-666c-4bd4-953f-77195ddef2f4"
+                  propertyLabel="Service5" />
+                </parametervalue>
+              </msgParameters>
+            </message>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape13.dragpoint1" toShape="shape18"
+            x="912.0" y="585.0">
+              <linesegment name="shape13.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="770.0" y="591.0" />
+              <linesegment name="shape13.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="770.0" y="591.0" />
+              <linesegment name="shape13.dragpoint1.lineseg3"
+              length="79" orient="horizontal" x="770.0"
+              y="591.0" />
+              <linesegment name="shape13.dragpoint1.lineseg4"
+              length="0" orient="vertical" x="849.0" y="591.0" />
+              <linesegment name="shape13.dragpoint1.lineseg5"
+              length="63" orient="horizontal" x="849.0"
+              y="591.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape14" userlabel=""
+        image="businessrules_icon" x="928.0" y="96.0"
+        shapetype="businessrules">
+          <configuration>
+            <businessrules profileId="87618f8f-2814-4ded-b65d-6db5a7ee1950"
+            profileName="Test Customer Details"
+            profileType="profile.json">
+              <rule name="New Business Rule" key="1">
+                <input xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:type="BusinessRuleField" elementKey="12"
+                taglist="0"
+                name="ServiceName (Root/Object/ServiceName)"
+                alias="ServiceName" id="1" />
+                <condition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:type="GroupingCondition" operator="and">
+                  <nestedExpression xsi:type="SimpleCondition"
+                  operator="=">
+                    <leftInput xsi:type="FieldConditionInput"
+                    name="ServiceName" id="1" deleted="false" />
+                    <rightInput xsi:type="StaticConditionInput"
+                    value="Netsuite" name="&quot;Netsuite&quot;"
+                    id="0" deleted="false" />
+                  </nestedExpression>
+                </condition>
+                <errorMessage />
+              </rule>
+            </businessrules>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape14.dragpoint1" toShape="shape7"
+            identifier="Accepted" text="Accepted" x="1200.0"
+            y="105.0">
+              <linesegment name="shape14.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="962.0" y="111.0" />
+              <linesegment name="shape14.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="962.0" y="111.0" />
+              <linesegment name="shape14.dragpoint1.lineseg3"
+              length="127" orient="horizontal" x="962.0"
+              y="111.0" />
+              <linesegment name="shape14.dragpoint1.lineseg4"
+              length="0" orient="vertical" x="1089.0" y="111.0" />
+              <linesegment name="shape14.dragpoint1.lineseg5"
+              length="111" orient="horizontal" label="Accepted"
+              x="1089.0" y="111.0" />
+            </dragpoint>
+            <dragpoint name="shape14.dragpoint2" toShape="shape20"
+            identifier="Rejected" text="Rejected" x="1200.0"
+            y="169.0">
+              <linesegment name="shape14.dragpoint2.lineseg1"
+              length="0" orient="horizontal" x="962.0" y="111.0" />
+              <linesegment name="shape14.dragpoint2.lineseg2"
+              length="0" orient="vertical" x="962.0" y="111.0" />
+              <linesegment name="shape14.dragpoint2.lineseg3"
+              length="127" orient="horizontal" x="962.0"
+              y="111.0" />
+              <linesegment name="shape14.dragpoint2.lineseg4"
+              length="64" orient="vertical" x="1089.0" y="111.0" />
+              <linesegment name="shape14.dragpoint2.lineseg5"
+              length="111" orient="horizontal" label="Rejected"
+              x="1089.0" y="175.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape15" userlabel="SF Data"
+        image="message_icon" x="1184.0" y="208.0"
+        shapetype="message">
+          <configuration>
+            <message combined="false">
+              <msgTxt>'{ "TestCaseID":"2",
+              "ServiceName":"Salesforce", "Description":"Check
+              Data", "Result":"Pass", "ErrorMessage":"" }'</msgTxt>
+              <msgParameters />
+            </message>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape15.dragpoint1" toShape="shape16"
+            x="1520.0" y="361.0">
+              <linesegment name="shape15.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="1218.0"
+              y="223.0" />
+              <linesegment name="shape15.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="1218.0" y="223.0" />
+              <linesegment name="shape15.dragpoint1.lineseg3"
+              length="159" orient="horizontal" x="1218.0"
+              y="223.0" />
+              <linesegment name="shape15.dragpoint1.lineseg4"
+              length="144" orient="vertical" x="1377.0"
+              y="223.0" />
+              <linesegment name="shape15.dragpoint1.lineseg5"
+              length="143" orient="horizontal" x="1377.0"
+              y="367.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape17" userlabel="Flexera Service"
+        image="message_icon" x="1216.0" y="352.0"
+        shapetype="message">
+          <configuration>
+            <message combined="false">
+              <msgTxt>'{ "TestCaseID":"3", "ServiceName":"Flexera",
+              "Description":"Check Data", "Result":"Pass"
+              }'</msgTxt>
+              <msgParameters />
+            </message>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape17.dragpoint1" toShape="shape16"
+            x="1520.0" y="361.0">
+              <linesegment name="shape17.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="1250.0"
+              y="367.0" />
+              <linesegment name="shape17.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="1250.0" y="367.0" />
+              <linesegment name="shape17.dragpoint1.lineseg3"
+              length="143" orient="horizontal" x="1250.0"
+              y="367.0" />
+              <linesegment name="shape17.dragpoint1.lineseg4"
+              length="0" orient="vertical" x="1393.0" y="367.0" />
+              <linesegment name="shape17.dragpoint1.lineseg5"
+              length="127" orient="horizontal" x="1393.0"
+              y="367.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+      </shapes>
+    </process>
+  </Object>
+</Component>

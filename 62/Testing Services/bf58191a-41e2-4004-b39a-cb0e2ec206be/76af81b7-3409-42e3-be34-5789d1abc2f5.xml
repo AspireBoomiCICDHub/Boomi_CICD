@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Component xmlns:ns2="http://www.boomi.com/connector/annotation"
+xmlns:ns3="http://exacttarget.com/wsdl/partnerAPI"
+xmlns:ns4="urn:fault.partner.exacttarget.com"
+xmlns:ns5="http://schemas.boomi.com/sap/edi_dc40"
+xmlns:ns6="http://schemas.microsoft.com/2003/10/Serialization/"
+deleted="false">
+  <Id>76af81b7-3409-42e3-be34-5789d1abc2f5</Id>
+  <Type>transform.function</Type>
+  <Name>Test Case Pass/Fail</Name>
+  <Version>3</Version>
+  <FolderId name="Aspire System Consulting Pte Ltd/R and D/Deepika">
+  2465028</FolderId>
+  <AccountId>aspiresystemconsultingpte-41FMFS</AccountId>
+  <Properties />
+  <References />
+  <Description />
+  <Object>
+    <Function>
+      <Inputs>
+        <Input key="1" name="Result" />
+      </Inputs>
+      <Outputs />
+      <Steps>
+        <FunctionStep key="1" position="1" name="Scripting"
+        type="Scripting" x="362.0" y="228.0" category="Scripting"
+        cacheOption="none" sumEnabled="false" cacheEnabled="true">
+          <Inputs>
+            <Input key="2" name="result" />
+          </Inputs>
+          <Outputs>
+            <Output key="1" name="error" />
+          </Outputs>
+          <Configuration>
+            <Scripting language="groovy" useComponent="false"
+            preserveOrder="true" useCache="true">
+              <ScriptToExecute>if(result=='Fail') { error='1'; }
+              else if(result=='Pass') { error='0'; } else {
+              error='0'; }</ScriptToExecute>
+              <Input index="2" name="result"
+              dataType="character" />
+              <Output index="1" name="error" />
+            </Scripting>
+          </Configuration>
+        </FunctionStep>
+        <FunctionStep key="2" position="2"
+        name="Set Dynamic Process Property" type="PropertySet"
+        x="696.0" y="235.0" category="ProcessProperty"
+        cacheOption="none" sumEnabled="false" cacheEnabled="true">
+          <Inputs>
+            <Input key="1" name="Property Name"
+            default="DPP_Error" />
+            <Input key="2" name="Property Value" />
+          </Inputs>
+          <Outputs />
+          <Configuration />
+        </FunctionStep>
+        <FunctionStep key="3" position="3"
+        name="Set Document Property" type="DocumentPropertySet"
+        x="707.0" y="363.0" category="ProcessProperty"
+        cacheOption="none" sumEnabled="false" cacheEnabled="true">
+          <Inputs>
+            <Input key="1"
+            name="Dynamic Document Property - DDP_Error" />
+          </Inputs>
+          <Outputs />
+          <Configuration>
+            <DocumentProperty propertyId="dynamicdocument.DDP_Error"
+            propertyName="Dynamic Document Property - DDP_Error"
+            defaultValue="" persist="false" />
+          </Configuration>
+        </FunctionStep>
+      </Steps>
+      <Mappings>
+        <Mapping fromType="function" fromKey="1"
+        fromNamePath="Editor/Result" fromFunction="0"
+        toType="function" toKey="2" toNamePath="Scripting/result"
+        toFunction="1" />
+        <Mapping fromType="function" fromKey="1"
+        fromNamePath="Scripting/error" fromFunction="1"
+        toType="function" toKey="1"
+        toNamePath="Set Document Property/Dynamic Document Property - DDP_Error"
+        toFunction="3" />
+      </Mappings>
+    </Function>
+  </Object>
+</Component>
