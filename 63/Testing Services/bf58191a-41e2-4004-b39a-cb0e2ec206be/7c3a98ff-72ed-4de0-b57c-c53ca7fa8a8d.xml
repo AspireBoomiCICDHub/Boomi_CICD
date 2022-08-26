@@ -1,0 +1,313 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Component xmlns:ns2="http://www.boomi.com/connector/annotation"
+xmlns:ns3="http://exacttarget.com/wsdl/partnerAPI"
+xmlns:ns4="urn:fault.partner.exacttarget.com"
+xmlns:ns5="http://schemas.boomi.com/sap/edi_dc40"
+xmlns:ns6="http://schemas.microsoft.com/2003/10/Serialization/"
+deleted="false">
+  <Id>7c3a98ff-72ed-4de0-b57c-c53ca7fa8a8d</Id>
+  <Type>process</Type>
+  <Name>Test Data</Name>
+  <Version>166</Version>
+  <FolderId name="Aspire System Consulting Pte Ltd/R and D/Deepika">
+  2465028</FolderId>
+  <AccountId>aspiresystemconsultingpte-41FMFS</AccountId>
+  <Properties>
+    <Property>
+      <Name>overrides-enabled</Name>
+      <Value>false</Value>
+    </Property>
+    <Property>
+      <Name>startshape-type</Name>
+      <Value>PASSTHROUGH</Value>
+    </Property>
+  </Properties>
+  <References>
+    <Ref compId="eccb0147-2b88-4569-844f-9d0a1f2f415d"
+    refId="shape148-0-table" name="Test Case Lookup" />
+    <Ref compId="eccb0147-2b88-4569-844f-9d0a1f2f415d"
+    refId="shape134-parameter-5-table" name="Test Case Lookup" />
+  </References>
+  <Description />
+  <Object>
+    <process allowSimultaneous="false" enableUserLog="false"
+    updateRunDates="false" processLogOnErrorOnly="false"
+    workload="general" purgeDataImmediately="false">
+      <shapes>
+        <shape name="shape1" userlabel="" image="start" x="48.0"
+        y="48.0" shapetype="start">
+          <configuration>
+            <passthroughaction />
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape1.dragpoint1" toShape="shape154"
+            x="192.0" y="57.0">
+              <linesegment name="shape1.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="82.0" y="63.0" />
+              <linesegment name="shape1.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="82.0" y="63.0" />
+              <linesegment name="shape1.dragpoint1.lineseg3"
+              length="63" orient="horizontal" x="82.0" y="63.0" />
+              <linesegment name="shape1.dragpoint1.lineseg4"
+              length="0" orient="vertical" x="145.0" y="63.0" />
+              <linesegment name="shape1.dragpoint1.lineseg5"
+              length="47" orient="horizontal" x="145.0" y="63.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape30" userlabel="" image="flowcontrol_icon"
+        x="672.0" y="48.0" shapetype="flowcontrol">
+          <configuration>
+            <flowcontrol forEachCount="1" chunks="0"
+            chunkStyle="threadOnly" />
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape30.dragpoint1" toShape="shape138"
+            x="848.0" y="57.0">
+              <linesegment name="shape30.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="706.0" y="63.0" />
+              <linesegment name="shape30.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="706.0" y="63.0" />
+              <linesegment name="shape30.dragpoint1.lineseg3"
+              length="79" orient="horizontal" x="706.0" y="63.0" />
+              <linesegment name="shape30.dragpoint1.lineseg4"
+              length="0" orient="vertical" x="785.0" y="63.0" />
+              <linesegment name="shape30.dragpoint1.lineseg5"
+              length="63" orient="horizontal" x="785.0" y="63.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape134" userlabel="Set TCID &amp; City"
+        image="documentproperties_icon" x="1248.0" y="48.0"
+        shapetype="documentproperties">
+          <configuration>
+            <documentproperties>
+              <documentproperty persist="false"
+              name="Dynamic Document Property - DDP_TCID"
+              propertyId="dynamicdocument.DDP_TCID" defaultValue=""
+              isTradingPartner="false" isDynamicCredential="false"
+              shouldEncrypt="false">
+                <sourcevalues>
+                  <parametervalue valueType="current" key="4">
+                    <crossrefparameter crossRefTableId="eccb0147-2b88-4569-844f-9d0a1f2f415d"
+                    outputParamName="Parameter1 (City)"
+                    outputParamId="4">
+                      <inputs>
+                        <parametervalue valueType="track" key="0"
+                        elementToSetId="2"
+                        elementToSetName="Test_Case_ID">
+                          <trackparameter propertyId="dynamicdocument.DDP_TCID"
+                          propertyName="Dynamic Document Property - DDP_TCID"
+                          defaultValue="" />
+                        </parametervalue>
+                      </inputs>
+                    </crossrefparameter>
+                  </parametervalue>
+                </sourcevalues>
+              </documentproperty>
+              <documentproperty persist="false"
+              name="Dynamic Document Property - DDP_CITY"
+              propertyId="dynamicdocument.DDP_CITY" defaultValue=""
+              isTradingPartner="false" isDynamicCredential="false"
+              shouldEncrypt="false">
+                <sourcevalues>
+                  <parametervalue valueType="crossref" key="5">
+                    <crossrefparameter crossRefTableId="eccb0147-2b88-4569-844f-9d0a1f2f415d"
+                    outputParamName="Parameter1 (City)"
+                    outputParamId="4">
+                      <inputs>
+                        <parametervalue valueType="profile" key="0"
+                        elementToSetId="2"
+                        elementToSetName="Test_Case_ID">
+                          <profileelement elementId="3"
+                          elementName="TestCaseID (Record/Elements/TestCaseID)"
+                          profileId="a5742b15-0223-4ebc-adac-5e4d9d2ce64c"
+                          profileType="profile.flatfile" />
+                        </parametervalue>
+                      </inputs>
+                    </crossrefparameter>
+                  </parametervalue>
+                </sourcevalues>
+              </documentproperty>
+            </documentproperties>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape134.dragpoint1"
+            toShape="shape153" x="1424.0" y="57.0">
+              <linesegment name="shape134.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="1282.0" y="63.0" />
+              <linesegment name="shape134.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="1282.0" y="63.0" />
+              <linesegment name="shape134.dragpoint1.lineseg3"
+              length="79" orient="horizontal" x="1282.0"
+              y="63.0" />
+              <linesegment name="shape134.dragpoint1.lineseg4"
+              length="0" orient="vertical" x="1361.0" y="63.0" />
+              <linesegment name="shape134.dragpoint1.lineseg5"
+              length="63" orient="horizontal" x="1361.0"
+              y="63.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape138" userlabel="Remove Extra Line"
+        image="dataprocess_icon" x="864.0" y="48.0"
+        shapetype="dataprocess">
+          <configuration>
+            <dataprocess>
+              <step name="Search/Replace" processtype="1" index="1"
+              key="2">
+                <dataprocessreplace texttofind="[\n\r]"
+                replacewith="" searchType="document" />
+              </step>
+            </dataprocess>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape138.dragpoint1"
+            toShape="shape148" x="1040.0" y="57.0">
+              <linesegment name="shape138.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="898.0" y="63.0" />
+              <linesegment name="shape138.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="898.0" y="63.0" />
+              <linesegment name="shape138.dragpoint1.lineseg3"
+              length="79" orient="horizontal" x="898.0" y="63.0" />
+              <linesegment name="shape138.dragpoint1.lineseg4"
+              length="0" orient="vertical" x="977.0" y="63.0" />
+              <linesegment name="shape138.dragpoint1.lineseg5"
+              length="63" orient="horizontal" x="977.0" y="63.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape148" userlabel="Check TC is Active?"
+        image="decision_icon" x="1056.0" y="48.0"
+        shapetype="decision">
+          <configuration>
+            <decision name="Check TC is Active?"
+            comparison="equals">
+              <decisionvalue valueType="crossref">
+                <crossrefparameter crossRefTableId="eccb0147-2b88-4569-844f-9d0a1f2f415d"
+                outputParamName="Is_Active" outputParamId="8">
+                  <inputs>
+                    <parametervalue valueType="current" key="0"
+                    elementToSetId="2"
+                    elementToSetName="Test_Case_ID" />
+                  </inputs>
+                </crossrefparameter>
+              </decisionvalue>
+              <decisionvalue valueType="static">
+                <staticparameter staticproperty="Active" />
+              </decisionvalue>
+            </decision>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape148.dragpoint1"
+            toShape="shape134" identifier="true" text="True"
+            x="1232.0" y="57.0">
+              <linesegment name="shape148.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="1090.0" y="63.0" />
+              <linesegment name="shape148.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="1090.0" y="63.0" />
+              <linesegment name="shape148.dragpoint1.lineseg3"
+              length="79" orient="horizontal" x="1090.0"
+              y="63.0" />
+              <linesegment name="shape148.dragpoint1.lineseg4"
+              length="0" orient="vertical" x="1169.0" y="63.0" />
+              <linesegment name="shape148.dragpoint1.lineseg5"
+              length="63" orient="horizontal" label="True"
+              x="1169.0" y="63.0" />
+            </dragpoint>
+            <dragpoint name="shape148.dragpoint2"
+            toShape="shape149" identifier="false" text="False"
+            x="1232.0" y="217.0">
+              <linesegment name="shape148.dragpoint2.lineseg1"
+              length="0" orient="horizontal" x="1090.0" y="63.0" />
+              <linesegment name="shape148.dragpoint2.lineseg2"
+              length="0" orient="vertical" x="1090.0" y="63.0" />
+              <linesegment name="shape148.dragpoint2.lineseg3"
+              length="79" orient="horizontal" x="1090.0"
+              y="63.0" />
+              <linesegment name="shape148.dragpoint2.lineseg4"
+              length="160" orient="vertical" x="1169.0" y="63.0" />
+              <linesegment name="shape148.dragpoint2.lineseg5"
+              length="63" orient="horizontal" label="False"
+              x="1169.0" y="223.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape149" userlabel="" image="stop_icon"
+        x="1248.0" y="208.0" shapetype="stop">
+          <configuration>
+            <stop continue="true" />
+          </configuration>
+          <dragpoints />
+        </shape>
+        <shape name="shape153" userlabel=""
+        image="returndocuments_icon" x="1440.0" y="48.0"
+        shapetype="returndocuments">
+          <configuration>
+            <returndocuments label="" />
+          </configuration>
+          <dragpoints />
+        </shape>
+        <shape name="shape154" userlabel="Test Case IDs"
+        image="message_icon" x="208.0" y="48.0"
+        shapetype="message">
+          <configuration>
+            <message combined="false">
+              <msgTxt>TC001 TC002 TC003 TC004 TC005</msgTxt>
+              <msgParameters />
+            </message>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape154.dragpoint1"
+            toShape="shape155" x="384.0" y="57.0">
+              <linesegment name="shape154.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="242.0" y="63.0" />
+              <linesegment name="shape154.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="242.0" y="63.0" />
+              <linesegment name="shape154.dragpoint1.lineseg3"
+              length="79" orient="horizontal" x="242.0" y="63.0" />
+              <linesegment name="shape154.dragpoint1.lineseg4"
+              length="0" orient="vertical" x="321.0" y="63.0" />
+              <linesegment name="shape154.dragpoint1.lineseg5"
+              length="63" orient="horizontal" x="321.0" y="63.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape155" userlabel="Split Document"
+        image="dataprocess_icon" x="400.0" y="48.0"
+        shapetype="dataprocess">
+          <configuration>
+            <dataprocess>
+              <step name="Split Documents" processtype="8"
+              index="1" key="1">
+                <documentsplit profileType="ff">
+                  <SplitOptions>
+                    <FFOptions splitOption="split_line"
+                    headersOption="none" />
+                  </SplitOptions>
+                </documentsplit>
+              </step>
+            </dataprocess>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape155.dragpoint1" toShape="shape30"
+            x="656.0" y="57.0">
+              <linesegment name="shape155.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="434.0" y="63.0" />
+              <linesegment name="shape155.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="434.0" y="63.0" />
+              <linesegment name="shape155.dragpoint1.lineseg3"
+              length="119" orient="horizontal" x="434.0"
+              y="63.0" />
+              <linesegment name="shape155.dragpoint1.lineseg4"
+              length="0" orient="vertical" x="553.0" y="63.0" />
+              <linesegment name="shape155.dragpoint1.lineseg5"
+              length="103" orient="horizontal" x="553.0"
+              y="63.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+      </shapes>
+    </process>
+  </Object>
+</Component>
